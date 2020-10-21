@@ -288,7 +288,7 @@
     </script>
   </head>
 
-  <body class="index" data-languages="[&quot;python&quot;,&quot;javascript&quot;]">
+  <body class="index" data-languages="[&quot;shell&quot;,&quot;ruby&quot;,&quot;python&quot;,&quot;javascript&quot;]">
     <a href="#" id="nav-button">
       <span>
         NAV
@@ -296,8 +296,10 @@
       </span>
     </a>
     <div class="toc-wrapper">
-      <img src="images/logo-d07293d2.png" class="logo" alt="" />
+      <img src="images/logo-1e815a84.png" class="logo" alt="" />
         <div class="lang-selector">
+              <a href="#" data-language-name="shell">shell</a>
+              <a href="#" data-language-name="ruby">ruby</a>
               <a href="#" data-language-name="python">python</a>
               <a href="#" data-language-name="javascript">javascript</a>
         </div>
@@ -307,109 +309,22 @@
         <ul class="search-results"></ul>
       <ul id="toc" class="toc-list-h1">
           <li>
-            <a href="#sensefolio-api-documentation" class="toc-h1 toc-link" data-title="Sensefolio API Documentation">Sensefolio API Documentation</a>
+            <a href="#introduction" class="toc-h1 toc-link" data-title="Introduction">Introduction</a>
           </li>
           <li>
             <a href="#authentication" class="toc-h1 toc-link" data-title="Authentication">Authentication</a>
           </li>
           <li>
-            <a href="#get-full-list-of-companies" class="toc-h1 toc-link" data-title="Get Full List of Companies">Get Full List of Companies</a>
+            <a href="#kittens" class="toc-h1 toc-link" data-title="Kittens">Kittens</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#get-all-companies-covered-by-sensefolio-whether-they-public-or-private" class="toc-h2 toc-link" data-title="Get All Companies covered by Sensefolio (whether they Public or Private)">Get All Companies covered by Sensefolio (whether they Public or Private)</a>
-                  </li>
-              </ul>
-          </li>
-          <li>
-            <a href="#company-esg-score" class="toc-h1 toc-link" data-title="Company ESG Score">Company ESG Score</a>
-              <ul class="toc-list-h2">
-                  <li>
-                    <a href="#get-all-esg-scores-for-a-specific-company" class="toc-h2 toc-link" data-title="Get All ESG Scores for a Specific Company">Get All ESG Scores for a Specific Company</a>
+                    <a href="#get-all-kittens" class="toc-h2 toc-link" data-title="Get All Kittens">Get All Kittens</a>
                   </li>
                   <li>
-                    <a href="#get-all-esg-scores-for-a-specific-company-for-a-specific-period" class="toc-h2 toc-link" data-title="Get All ESG Scores for a Specific Company for a Specific Period">Get All ESG Scores for a Specific Company for a Specific Period</a>
-                  </li>
-              </ul>
-          </li>
-          <li>
-            <a href="#get-most-recent-company-esg-score" class="toc-h1 toc-link" data-title="Get Most Recent Company ESG Score">Get Most Recent Company ESG Score</a>
-              <ul class="toc-list-h2">
-                  <li>
-                    <a href="#get-most-recent-company-esg-score-2" class="toc-h2 toc-link" data-title="Get Most Recent Company ESG Score">Get Most Recent Company ESG Score</a>
-                  </li>
-              </ul>
-          </li>
-          <li>
-            <a href="#get-scores-for-a-specific-peer-group" class="toc-h1 toc-link" data-title="Get Scores for a Specific Peer Group">Get Scores for a Specific Peer Group</a>
-              <ul class="toc-list-h2">
-                  <li>
-                    <a href="#get-scores-for-a-specific-peer-group-2" class="toc-h2 toc-link" data-title="Get Scores for a Specific Peer Group">Get Scores for a Specific Peer Group</a>
-                  </li>
-              </ul>
-          </li>
-          <li>
-            <a href="#news" class="toc-h1 toc-link" data-title="News">News</a>
-              <ul class="toc-list-h2">
-                  <li>
-                    <a href="#get-all-news-for-a-specific-company" class="toc-h2 toc-link" data-title="Get All News for a Specific Company">Get All News for a Specific Company</a>
+                    <a href="#get-a-specific-kitten" class="toc-h2 toc-link" data-title="Get a Specific Kitten">Get a Specific Kitten</a>
                   </li>
                   <li>
-                    <a href="#get-all-news-for-a-specific-company-for-a-specific-topic" class="toc-h2 toc-link" data-title="Get All News for a Specific Company for a Specific Topic">Get All News for a Specific Company for a Specific Topic</a>
-                  </li>
-              </ul>
-          </li>
-          <li>
-            <a href="#tweets" class="toc-h1 toc-link" data-title="Tweets">Tweets</a>
-              <ul class="toc-list-h2">
-                  <li>
-                    <a href="#get-all-tweets-for-a-specific-company" class="toc-h2 toc-link" data-title="Get All Tweets for a Specific Company">Get All Tweets for a Specific Company</a>
-                  </li>
-                  <li>
-                    <a href="#get-all-tweets-for-a-specific-company-for-a-specific-topic" class="toc-h2 toc-link" data-title="Get All Tweets for a Specific Company for a Specific Topic">Get All Tweets for a Specific Company for a Specific Topic</a>
-                  </li>
-              </ul>
-          </li>
-          <li>
-            <a href="#g-company-reviews" class="toc-h1 toc-link" data-title="G Company Reviews">G Company Reviews</a>
-              <ul class="toc-list-h2">
-                  <li>
-                    <a href="#get-all-g-company-reviews-for-a-specific-company" class="toc-h2 toc-link" data-title="Get All G Company Reviews for a Specific Company">Get All G Company Reviews for a Specific Company</a>
-                  </li>
-                  <li>
-                    <a href="#get-all-g-company-reviews-for-a-specific-company-for-a-specific-topic" class="toc-h2 toc-link" data-title="Get All G Company Reviews for a Specific Company for a Specific Topic">Get All G Company Reviews for a Specific Company for a Specific Topic</a>
-                  </li>
-              </ul>
-          </li>
-          <li>
-            <a href="#i-company-reviews" class="toc-h1 toc-link" data-title="I Company Reviews">I Company Reviews</a>
-              <ul class="toc-list-h2">
-                  <li>
-                    <a href="#get-all-i-company-reviews-for-a-specific-company" class="toc-h2 toc-link" data-title="Get All I Company Reviews for a Specific Company">Get All I Company Reviews for a Specific Company</a>
-                  </li>
-                  <li>
-                    <a href="#get-all-i-company-reviews-for-a-specific-company-for-a-specific-topic" class="toc-h2 toc-link" data-title="Get All I Company Reviews for a Specific Company for a Specific Topic">Get All I Company Reviews for a Specific Company for a Specific Topic</a>
-                  </li>
-              </ul>
-          </li>
-          <li>
-            <a href="#carbon-disclosure" class="toc-h1 toc-link" data-title="Carbon Disclosure">Carbon Disclosure</a>
-              <ul class="toc-list-h2">
-                  <li>
-                    <a href="#get-all-carbon-disclosure-information-for-a-specific-company" class="toc-h2 toc-link" data-title="Get All Carbon Disclosure Information for a Specific Company">Get All Carbon Disclosure Information for a Specific Company</a>
-                  </li>
-                  <li>
-                    <a href="#get-all-carbon-disclosure-information-for-a-specific-company-for-a-specific-topic" class="toc-h2 toc-link" data-title="Get All Carbon Disclosure Information for a Specific Company for a Specific Topic">Get All Carbon Disclosure Information for a Specific Company for a Specific Topic</a>
-                  </li>
-              </ul>
-          </li>
-          <li>
-            <a href="#violation-tracker" class="toc-h1 toc-link" data-title="Violation Tracker">Violation Tracker</a>
-              <ul class="toc-list-h2">
-                  <li>
-                    <a href="#get-all-violation-information-for-a-specific-company" class="toc-h2 toc-link" data-title="Get All Violation Information for a Specific Company">Get All Violation Information for a Specific Company</a>
-                  </li>
-                  <li>
-                    <a href="#get-all-violation-information-for-a-specific-company-for-a-specific-topic" class="toc-h2 toc-link" data-title="Get All Violation Information for a Specific Company for a Specific Topic">Get All Violation Information for a Specific Company for a Specific Topic</a>
+                    <a href="#delete-a-specific-kitten" class="toc-h2 toc-link" data-title="Delete a Specific Kitten">Delete a Specific Kitten</a>
                   </li>
               </ul>
           </li>
@@ -418,35 +333,32 @@
           </li>
       </ul>
         <ul class="toc-footer">
-            <li><a href='https://sensefolio.com/'>Sign Up for a Sensefolio API Key</a></li>
-            <li></li>
-            <li><a href='#'>ESG Data Powered by Sensefolio</a></li>
+            <li><a href='#'>Sign Up for a Developer Key</a></li>
+            <li><a href='https://github.com/slatedocs/slate'>Documentation Powered by Slate</a></li>
         </ul>
     </div>
     <div class="page-wrapper">
       <div class="dark-box"></div>
       <div class="content">
-        <h1 id='sensefolio-api-documentation'>Sensefolio API Documentation</h1>
-<p><strong>Welcome to the Sensefolio API !</strong></p>
+        <h1 id='introduction'>Introduction</h1>
+<p>Welcome to the Kittn API! You can use our API to access Kittn API endpoints, which can get information on various cats, kittens, and breeds in our database.</p>
 
-<p>You can use our API to access Sensefolio API endpoints, which can get Sensefolio ESG Data.<br>
-Any questions on the Sensefolio ESG Data? Please contact us: <a href="mailto:contact@sensefolio.com">contact@sensefolio.com</a> or visit <a href='https://sensefolio.com/'>sensefolio.com</a></p>
+<p>We have language bindings in Shell, Ruby, Python, and JavaScript! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.</p>
 
-<p>We have language bindings in Python and JavaScript! </p>
-
-<p>You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.</p>
-
-<p>To request an API Key, please contact <a href="mailto:contact@sensefolio.com">contact@sensefolio.com</a> or visit <a href='https://sensefolio.com/'>sensefolio.com</a></p>
+<p>This example API documentation page was created with <a href="https://github.com/slatedocs/slate">Slate</a>. Feel free to edit it and use it as a base for your own API&#39;s documentation.</p>
 <h1 id='authentication'>Authentication</h1>
 <blockquote>
 <p>To authorize, use this code:</p>
 </blockquote>
-<div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">requests</span>
+<div class="highlight"><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
 
-<span class="n">apiKey</span> <span class="o">=</span> <span class="s">'Your_API_Key'</span>
+<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
+</code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
 
-<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s">'x-api-key'</span><span class="p">:</span> <span class="n">apiKey</span><span class="p">,</span>
-           <span class="s">'content-type'</span><span class="p">:</span> <span class="s">'application/json'</span><span class="p">}</span>
+<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="p">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
+</code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code><span class="c"># With shell, you can just pass the correct header with each request</span>
+curl <span class="s2">"api_endpoint_here"</span>
+  <span class="nt">-H</span> <span class="s2">"Authorization: meowmeowmeow"</span>
 </code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">kittn</span><span class="dl">'</span><span class="p">);</span>
 
 <span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="dl">'</span><span class="s1">meowmeowmeow</span><span class="dl">'</span><span class="p">);</span>
@@ -455,46 +367,25 @@ Any questions on the Sensefolio ESG Data? Please contact us: <a href="mailto:con
 <p>Make sure to replace <code>meowmeowmeow</code> with your API key.</p>
 </blockquote>
 
-<p>Sensefolio uses API keys to allow access to the API. 
-To request an API Key, please contact <a href="mailto:contact@sensefolio.com">contact@sensefolio.com</a> or visit <a href='https://sensefolio.com/'>sensefolio.com</a></p>
+<p>Kittn uses API keys to allow access to the API. You can register a new Kittn API key at our <a href="http://example.com/developers">developer portal</a>.</p>
 
-<p>Sensefolio expects for the API key to be included in all API requests to the server in a header that looks like the following:</p>
+<p>Kittn expects for the API key to be included in all API requests to the server in a header that looks like the following:</p>
 
-<p><code>apiKey: YOUR_API_KEY</code></p>
-
-<p><strong>Security Warning:</strong>
-It&#39;s important to secure your API Key against public access. The custom header option is strongly recommended over the querystring option for passing your API Key in a production environment.</p>
-
-<p><strong>Standards and Conventions</strong>
-Each HTTP request must contain the header Accept: application/json.</p>
-
-<p><strong>Errors and Rate Limits</strong>
-API Request Throttling
-Use of the Sensefolio API is subject to API call rate limiting or &quot;request throttling&quot;. This is the number of HTTP calls that can be made simultaneously or within the same minute with your API Key before receiving an HTTP 429 &quot;Too Many Requests&quot; throttling error.</p>
+<p><code>Authorization: meowmeowmeow</code></p>
 
 <aside class="notice">
-Note: Making HTTP requests on the client side with Javascript is currently prohibited through CORS configuration. This is to protect your API Key which should not be visible to users of your application, so your API Key is not stolen. Secure your API Key by routing calls through your own backend service..
+You must replace <code>meowmeowmeow</code> with your personal API key.
 </aside>
-<h1 id='get-full-list-of-companies'>Get Full List of Companies</h1><h2 id='get-all-companies-covered-by-sensefolio-whether-they-public-or-private'>Get All Companies covered by Sensefolio (whether they Public or Private)</h2><div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">requests</span>
+<h1 id='kittens'>Kittens</h1><h2 id='get-all-kittens'>Get All Kittens</h2><div class="highlight"><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
 
-<span class="n">apiKey</span> <span class="o">=</span> <span class="s">'Your_API_Key'</span>
-<span class="n">company_idx</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="n">start_date</span> <span class="o">=</span> <span class="s">"2015-01-01"</span>
-<span class="n">end_date</span> <span class="o">=</span> <span class="s">"2020-12-01"</span>
+<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
+<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">get</span>
+</code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
 
-<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s">'x-api-key'</span><span class="p">:</span> <span class="n">apiKey</span><span class="p">,</span>
-           <span class="s">'content-type'</span><span class="p">:</span> <span class="s">'application/json'</span><span class="p">}</span>
-
-<span class="n">companyScore_companyExample_ActualNews</span> <span class="o">=</span> <span class="n">requests</span><span class="p">.</span><span class="n">get</span><span class="p">(</span>
-        <span class="s">"https://circular-hawk-253618.appspot.com/companyInfoFull?
-        company_idx="</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">company_idx</span><span class="p">)</span><span class="o">+</span><span class="s">"&amp;
-        start_date=str(start_date)&amp;
-        end_date=str(end_date)&amp;
-        category=&amp;
-        topic=&amp;
-        criteria=&amp;
-        word="</span>
-        <span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">).</span><span class="n">json</span><span class="p">()</span>
+<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="p">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
+<span class="n">api</span><span class="p">.</span><span class="n">kittens</span><span class="p">.</span><span class="n">get</span><span class="p">()</span>
+</code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/kittens"</span>
+  <span class="nt">-H</span> <span class="s2">"Authorization: meowmeowmeow"</span>
 </code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">kittn</span><span class="dl">'</span><span class="p">);</span>
 
 <span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="dl">'</span><span class="s1">meowmeowmeow</span><span class="dl">'</span><span class="p">);</span>
@@ -520,9 +411,9 @@ Note: Making HTTP requests on the client side with Javascript is currently prohi
   </span><span class="p">}</span><span class="w">
 </span><span class="p">]</span><span class="w">
 </span></code></pre></div>
-<p>This endpoint retrieves all news.</p>
+<p>This endpoint retrieves all kittens.</p>
 <h3 id='http-request'>HTTP Request</h3>
-<p><code>GET https://circular-hawk-253618.appspot.com/companyInfoFull</code></p>
+<p><code>GET http://example.com/api/kittens</code></p>
 <h3 id='query-parameters'>Query Parameters</h3>
 <table><thead>
 <tr>
@@ -542,98 +433,20 @@ Note: Making HTTP requests on the client side with Javascript is currently prohi
 <td>If set to false, the result will include kittens that have already been adopted.</td>
 </tr>
 </tbody></table>
-<h1 id='company-esg-score'>Company ESG Score</h1><h2 id='get-all-esg-scores-for-a-specific-company'>Get All ESG Scores for a Specific Company</h2><div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">requests</span>
-
-<span class="n">apiKey</span> <span class="o">=</span> <span class="s">'Your_API_Key'</span>
-<span class="n">company_idx</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="n">start_date</span> <span class="o">=</span> <span class="s">"2015-01-01"</span>
-<span class="n">end_date</span> <span class="o">=</span> <span class="s">"2020-12-01"</span>
-
-<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s">'x-api-key'</span><span class="p">:</span> <span class="n">apiKey</span><span class="p">,</span>
-           <span class="s">'content-type'</span><span class="p">:</span> <span class="s">'application/json'</span><span class="p">}</span>
-
-<span class="n">companyScore_companyExample_ActualNews</span> <span class="o">=</span> <span class="n">requests</span><span class="p">.</span><span class="n">get</span><span class="p">(</span>
-        <span class="s">"https://circular-hawk-253618.appspot.com/companyScore?
-        company_idx="</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">company_idx</span><span class="p">)</span><span class="o">+</span><span class="s">"&amp;
-        start_date=str(start_date)&amp;
-        end_date=str(end_date)&amp;
-        category=&amp;
-        topic=&amp;
-        criteria=&amp;
-        word="</span>
-        <span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">).</span><span class="n">json</span><span class="p">()</span>
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">kittn</span><span class="dl">'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="dl">'</span><span class="s1">meowmeowmeow</span><span class="dl">'</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">kittens</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="kd">get</span><span class="p">();</span>
-</code></pre></div>
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Fluffums"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"calico"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Max"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unknown"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
-  </span><span class="p">}</span><span class="w">
-</span><span class="p">]</span><span class="w">
-</span></code></pre></div>
-<p>This endpoint retrieves all news.</p>
-<h3 id='http-request-2'>HTTP Request</h3>
-<p><code>GET https://circular-hawk-253618.appspot.com/companyScore</code></p>
-<h3 id='query-parameters-2'>Query Parameters</h3>
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Default</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>include_cats</td>
-<td>false</td>
-<td>If set to true, the result will also include cats.</td>
-</tr>
-<tr>
-<td>available</td>
-<td>true</td>
-<td>If set to false, the result will include kittens that have already been adopted.</td>
-</tr>
-</tbody></table>
 
 <aside class="success">
-Remember — You can only access the Sensefolio API with your given API allowance.
+Remember — a happy kitten is an authenticated kitten!
 </aside>
-<h2 id='get-all-esg-scores-for-a-specific-company-for-a-specific-period'>Get All ESG Scores for a Specific Company for a Specific Period</h2><div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">requests</span>
+<h2 id='get-a-specific-kitten'>Get a Specific Kitten</h2><div class="highlight"><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
 
-<span class="n">apiKey</span> <span class="o">=</span> <span class="s">'Your_API_Key'</span>
-<span class="n">company_idx</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="n">start_date</span> <span class="o">=</span> <span class="s">"2015-01-01"</span>
-<span class="n">end_date</span> <span class="o">=</span> <span class="s">"2020-12-01"</span>
-<span class="n">topic</span> <span class="o">=</span> <span class="s">"business_ethics"</span>
+<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
+<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
 
-<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s">'x-api-key'</span><span class="p">:</span> <span class="n">apiKey</span><span class="p">,</span>
-           <span class="s">'content-type'</span><span class="p">:</span> <span class="s">'application/json'</span><span class="p">}</span>
-
-<span class="n">companyScore_companyExample_ActualNews</span> <span class="o">=</span> <span class="n">requests</span><span class="p">.</span><span class="n">get</span><span class="p">(</span>
-        <span class="s">"https://circular-hawk-253618.appspot.com/companyScore?
-        company_idx="</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">company_idx</span><span class="p">)</span><span class="o">+</span><span class="s">"&amp;
-        start_date=str(start_date)&amp;
-        end_date=str(end_date)&amp;
-        category=&amp;
-        topic=str(topic)&amp;
-        criteria=&amp;
-        word="</span>
-        <span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">).</span><span class="n">json</span><span class="p">()</span>
+<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="p">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
+<span class="n">api</span><span class="p">.</span><span class="n">kittens</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/kittens/2"</span>
+  <span class="nt">-H</span> <span class="s2">"Authorization: meowmeowmeow"</span>
 </code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">kittn</span><span class="dl">'</span><span class="p">);</span>
 
 <span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="dl">'</span><span class="s1">meowmeowmeow</span><span class="dl">'</span><span class="p">);</span>
@@ -650,11 +463,11 @@ Remember — You can only access the Sensefolio API with your given API allowanc
   </span><span class="nl">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div>
-<p>This endpoint retrieves a news for a specific company and for a specific Sensefolio topic.</p>
+<p>This endpoint retrieves a specific kitten.</p>
 
 <aside class="warning">Inside HTML code blocks like this one, you can't use Markdown, so use <code>&lt;code&gt;</code> blocks to denote code.</aside>
-<h3 id='http-request-3'>HTTP Request</h3>
-<p><code>GET https://circular-hawk-253618.appspot.com/companyScore</code></p>
+<h3 id='http-request-2'>HTTP Request</h3>
+<p><code>GET http://example.com/kittens/&lt;ID&gt;</code></p>
 <h3 id='url-parameters'>URL Parameters</h3>
 <table><thead>
 <tr>
@@ -667,312 +480,33 @@ Remember — You can only access the Sensefolio API with your given API allowanc
 <td>The ID of the kitten to retrieve</td>
 </tr>
 </tbody></table>
-<h1 id='get-most-recent-company-esg-score'>Get Most Recent Company ESG Score</h1><h2 id='get-most-recent-company-esg-score-2'>Get Most Recent Company ESG Score</h2><div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">requests</span>
+<h2 id='delete-a-specific-kitten'>Delete a Specific Kitten</h2><div class="highlight"><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
 
-<span class="n">apiKey</span> <span class="o">=</span> <span class="s">'Your_API_Key'</span>
-<span class="n">company_idx</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
+<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
 
-<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s">'x-api-key'</span><span class="p">:</span> <span class="n">apiKey</span><span class="p">,</span>
-           <span class="s">'content-type'</span><span class="p">:</span> <span class="s">'application/json'</span><span class="p">}</span>
-
-<span class="n">companyScore_companyExample_ActualNews</span> <span class="o">=</span> <span class="n">requests</span><span class="p">.</span><span class="n">get</span><span class="p">(</span>
-        <span class="s">"https://circular-hawk-253618.appspot.com/companyLastScore?
-        company_idx="</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">company_idx</span><span class="p">)</span><span class="s">"
-        , headers=headers).json()
-</span></code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">kittn</span><span class="dl">'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="dl">'</span><span class="s1">meowmeowmeow</span><span class="dl">'</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">kittens</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="kd">get</span><span class="p">();</span>
-</code></pre></div>
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Fluffums"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"calico"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Max"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unknown"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
-  </span><span class="p">}</span><span class="w">
-</span><span class="p">]</span><span class="w">
-</span></code></pre></div>
-<p>This endpoint retrieves all news.</p>
-<h3 id='http-request-4'>HTTP Request</h3>
-<p><code>GET https://circular-hawk-253618.appspot.com/companyLastScore</code></p>
-<h3 id='query-parameters-3'>Query Parameters</h3>
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Default</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>company_idx</td>
-<td>none</td>
-<td>It is necessary to include a &quot;company_idx&quot;.</td>
-</tr>
-</tbody></table>
-<h1 id='get-scores-for-a-specific-peer-group'>Get Scores for a Specific Peer Group</h1><h2 id='get-scores-for-a-specific-peer-group-2'>Get Scores for a Specific Peer Group</h2><div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">requests</span>
-
-<span class="n">apiKey</span> <span class="o">=</span> <span class="s">'Your_API_Key'</span>
-<span class="n">company_idx</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="n">start_date</span> <span class="o">=</span> <span class="s">"2015-01-01"</span>
-<span class="n">end_date</span> <span class="o">=</span> <span class="s">"2020-12-01"</span>
-
-<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s">'x-api-key'</span><span class="p">:</span> <span class="n">apiKey</span><span class="p">,</span>
-           <span class="s">'content-type'</span><span class="p">:</span> <span class="s">'application/json'</span><span class="p">}</span>
-
-<span class="n">companyScore_companyExample_ActualNews</span> <span class="o">=</span> <span class="n">requests</span><span class="p">.</span><span class="n">get</span><span class="p">(</span>
-        <span class="s">"https://circular-hawk-253618.appspot.com/peerGroupScore?
-        company_idx="</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">company_idx</span><span class="p">)</span><span class="o">+</span><span class="s">"&amp;
-        start_date=str(start_date)&amp;
-        end_date=str(end_date)&amp;
-        category=&amp;
-        topic=&amp;
-        criteria=&amp;
-        word="</span>
-        <span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">).</span><span class="n">json</span><span class="p">()</span>
+<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="p">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
+<span class="n">api</span><span class="p">.</span><span class="n">kittens</span><span class="p">.</span><span class="n">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/kittens/2"</span>
+  <span class="nt">-X</span> DELETE
+  <span class="nt">-H</span> <span class="s2">"Authorization: meowmeowmeow"</span>
 </code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">kittn</span><span class="dl">'</span><span class="p">);</span>
 
 <span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="dl">'</span><span class="s1">meowmeowmeow</span><span class="dl">'</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">kittens</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="kd">get</span><span class="p">();</span>
-</code></pre></div>
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Fluffums"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"calico"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Max"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unknown"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
-  </span><span class="p">}</span><span class="w">
-</span><span class="p">]</span><span class="w">
-</span></code></pre></div>
-<p>This endpoint retrieves all news.</p>
-<h3 id='http-request-5'>HTTP Request</h3>
-<p><code>GET https://circular-hawk-253618.appspot.com/peerGroupScore</code></p>
-<h3 id='query-parameters-4'>Query Parameters</h3>
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Default</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>include_cats</td>
-<td>false</td>
-<td>If set to true, the result will also include cats.</td>
-</tr>
-<tr>
-<td>available</td>
-<td>true</td>
-<td>If set to false, the result will include kittens that have already been adopted.</td>
-</tr>
-</tbody></table>
-<h1 id='news'>News</h1><h2 id='get-all-news-for-a-specific-company'>Get All News for a Specific Company</h2><div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">requests</span>
-
-<span class="n">apiKey</span> <span class="o">=</span> <span class="s">'Your_API_Key'</span>
-<span class="n">company_idx</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="n">start_date</span> <span class="o">=</span> <span class="s">"2015-01-01"</span>
-<span class="n">end_date</span> <span class="o">=</span> <span class="s">"2020-12-01"</span>
-
-<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s">'x-api-key'</span><span class="p">:</span> <span class="n">apiKey</span><span class="p">,</span>
-           <span class="s">'content-type'</span><span class="p">:</span> <span class="s">'application/json'</span><span class="p">}</span>
-
-<span class="n">companyScore_companyExample_ActualNews</span> <span class="o">=</span> <span class="n">requests</span><span class="p">.</span><span class="n">get</span><span class="p">(</span>
-        <span class="s">"https://circular-hawk-253618.appspot.com/ActualNews3?
-        company_idx="</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">company_idx</span><span class="p">)</span><span class="o">+</span><span class="s">"&amp;
-        start_date=str(start_date)&amp;
-        end_date=str(end_date)&amp;
-        category=&amp;
-        topic=&amp;
-        criteria=&amp;
-        word="</span>
-        <span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">).</span><span class="n">json</span><span class="p">()</span>
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">kittn</span><span class="dl">'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="dl">'</span><span class="s1">meowmeowmeow</span><span class="dl">'</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">kittens</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="kd">get</span><span class="p">();</span>
-</code></pre></div>
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Fluffums"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"calico"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Max"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unknown"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
-  </span><span class="p">}</span><span class="w">
-</span><span class="p">]</span><span class="w">
-</span></code></pre></div>
-<p>This endpoint retrieves all news.</p>
-<h3 id='http-request-6'>HTTP Request</h3>
-<p><code>GET https://circular-hawk-253618.appspot.com/ActualNews3</code></p>
-<h3 id='query-parameters-5'>Query Parameters</h3>
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Default</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>include_cats</td>
-<td>false</td>
-<td>If set to true, the result will also include cats.</td>
-</tr>
-<tr>
-<td>available</td>
-<td>true</td>
-<td>If set to false, the result will include kittens that have already been adopted.</td>
-</tr>
-</tbody></table>
-
-<p><strong>1.1 AIR QUALITY</strong><br>
-&#39;air_quality&#39;<br>
-&#39;environment_compliance&#39;<br>
-&#39;energy_mgmt&#39;<br>
-&#39;fuel_mgmt&#39;<br>
-&#39;ghg_emissions&#39;<br></p>
-
-<p><strong>1.2 SUSTAINABILITY</strong><br>
-&#39;environmental_impact&#39;<br>
-&#39;supplier_environment&#39;<br>
-&#39;environment_business_dev&#39;<br>
-&#39;environment_kpi&#39;<br>
-&#39;lifecycle_impacts&#39;<br>
-&#39;product_packaging&#39;<br>
-&#39;product_quality_safety&#39;<br>
-&#39;responsible_consumption_prod&#39;<br></p>
-
-<p><strong>1.3 BIODIVERSITY AND WATER</strong><br>
-&#39;biodiv_impacts&#39;<br>
-&#39;water_mgmt&#39;<br>
-&#39;waste_mgmt&#39;<br></p>
-
-<p><strong>2.1 HEALTH &amp; SAFETY</strong><br>
-&#39;health_safety&#39;<br></p>
-
-<p><strong>2.2 EMPLOYEE STANDARDS</strong><br>
-&#39;fair_labor&#39;<br>
-&#39;labor_mgmt_relations&#39;<br>
-&#39;training_education&#39;<br>
-&#39;diversity_equal&#39;<br>
-&#39;compensation_benefits&#39;<br>
-&#39;recruitment_dev&#39;<br></p>
-
-<p><strong>2.3 COMMUNITY RESPONSIBILITY</strong><br>
-&#39;access_affordability&#39;<br>
-&#39;customer_health&#39;<br>
-&#39;customer_privacy&#39;<br>
-&#39;fair_disclosure&#39;<br>
-&#39;fair_marketing&#39;<br>
-&#39;local_communities&#39;<br>
-&#39;social_impacts&#39;<br></p>
-
-<p><strong>2.4 HUMAN RIGHTS</strong><br>
-&#39;child_labor&#39;<br>
-&#39;freedom_association&#39;<br>
-&#39;human_rights&#39;<br>
-&#39;non_discrimination&#39;<br>
-&#39;rights_indigenous&#39;<br></p>
-
-<p><strong>3.1 LEADERSHIP/MGMT STRUCTURE</strong><br>
-&#39;board_leadership&#39;<br>
-&#39;ceo_exec_leadership&#39;<br>
-&#39;management_leadership&#39;<br>
-&#39;internal_control&#39;<br></p>
-
-<p><strong>3.2 BUSINESS INNOVATION AND PERFORMANCE</strong><br>
-&#39;economic_perf&#39;<br>
-&#39;industry_innovation&#39;<br>
-&#39;market_presence&#39;<br></p>
-
-<p><strong>3.3. OUTSIDE ACTIVITIES</strong><br>
-&#39;indirect_impacts&#39;<br>
-&#39;partnerships&#39;<br>
-&#39;peace_justice&#39;<br>
-&#39;transparency&#39;<br></p>
-
-<p><strong>3.4. BUSINESS ETHICS</strong><br>
-&#39;anti_corruption&#39;<br>
-&#39;anti_competitive&#39;<br>
-&#39;business_ethics_transparency&#39;<br>
-&#39;regulatory_capture&#39;<br></p>
-
-<aside class="success">
-Remember — You can only access the Sensefolio API with your given API allowance.
-</aside>
-<h2 id='get-all-news-for-a-specific-company-for-a-specific-topic'>Get All News for a Specific Company for a Specific Topic</h2><div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">requests</span>
-
-<span class="n">apiKey</span> <span class="o">=</span> <span class="s">'Your_API_Key'</span>
-<span class="n">company_idx</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="n">start_date</span> <span class="o">=</span> <span class="s">"2015-01-01"</span>
-<span class="n">end_date</span> <span class="o">=</span> <span class="s">"2020-12-01"</span>
-<span class="n">topic</span> <span class="o">=</span> <span class="s">"business_ethics"</span>
-
-<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s">'x-api-key'</span><span class="p">:</span> <span class="n">apiKey</span><span class="p">,</span>
-           <span class="s">'content-type'</span><span class="p">:</span> <span class="s">'application/json'</span><span class="p">}</span>
-
-<span class="n">companyScore_companyExample_ActualNews</span> <span class="o">=</span> <span class="n">requests</span><span class="p">.</span><span class="n">get</span><span class="p">(</span>
-        <span class="s">"https://circular-hawk-253618.appspot.com/ActualNews3?
-        company_idx="</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">company_idx</span><span class="p">)</span><span class="o">+</span><span class="s">"&amp;
-        start_date=str(start_date)&amp;
-        end_date=str(end_date)&amp;
-        category=&amp;
-        topic=str(topic)&amp;
-        criteria=&amp;
-        word="</span>
-        <span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">).</span><span class="n">json</span><span class="p">()</span>
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">kittn</span><span class="dl">'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="dl">'</span><span class="s1">meowmeowmeow</span><span class="dl">'</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">max</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+<span class="kd">let</span> <span class="nx">max</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="k">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
 </code></pre></div>
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
 </blockquote>
 <div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Max"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unknown"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
+  </span><span class="nl">"deleted"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">":("</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div>
-<p>This endpoint retrieves a news for a specific company and for a specific Sensefolio topic.</p>
-
-<aside class="warning">Inside HTML code blocks like this one, you can't use Markdown, so use <code>&lt;code&gt;</code> blocks to denote code.</aside>
-<h3 id='http-request-7'>HTTP Request</h3>
-<p><code>GET https://circular-hawk-253618.appspot.com/ActualNews3</code></p>
+<p>This endpoint deletes a specific kitten.</p>
+<h3 id='http-request-3'>HTTP Request</h3>
+<p><code>DELETE http://example.com/kittens/&lt;ID&gt;</code></p>
 <h3 id='url-parameters-2'>URL Parameters</h3>
 <table><thead>
 <tr>
@@ -982,632 +516,7 @@ Remember — You can only access the Sensefolio API with your given API allowanc
 </thead><tbody>
 <tr>
 <td>ID</td>
-<td>The ID of the kitten to retrieve</td>
-</tr>
-</tbody></table>
-<h1 id='tweets'>Tweets</h1><h2 id='get-all-tweets-for-a-specific-company'>Get All Tweets for a Specific Company</h2><div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">requests</span>
-
-<span class="n">apiKey</span> <span class="o">=</span> <span class="s">'Your_API_Key'</span>
-<span class="n">company_idx</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="n">start_date</span> <span class="o">=</span> <span class="s">"2015-01-01"</span>
-<span class="n">end_date</span> <span class="o">=</span> <span class="s">"2020-12-01"</span>
-
-<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s">'x-api-key'</span><span class="p">:</span> <span class="n">apiKey</span><span class="p">,</span>
-           <span class="s">'content-type'</span><span class="p">:</span> <span class="s">'application/json'</span><span class="p">}</span>
-
-<span class="n">companyScore_companyExample_ActualNews</span> <span class="o">=</span> <span class="n">requests</span><span class="p">.</span><span class="n">get</span><span class="p">(</span>
-        <span class="s">"https://circular-hawk-253618.appspot.com/ActualTweets?
-        company_idx="</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">company_idx</span><span class="p">)</span><span class="o">+</span><span class="s">"&amp;
-        start_date=str(start_date)&amp;
-        end_date=str(end_date)&amp;
-        category=&amp;
-        topic=&amp;
-        criteria=&amp;
-        word="</span>
-        <span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">).</span><span class="n">json</span><span class="p">()</span>
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">kittn</span><span class="dl">'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="dl">'</span><span class="s1">meowmeowmeow</span><span class="dl">'</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">kittens</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="kd">get</span><span class="p">();</span>
-</code></pre></div>
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Fluffums"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"calico"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Max"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unknown"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
-  </span><span class="p">}</span><span class="w">
-</span><span class="p">]</span><span class="w">
-</span></code></pre></div>
-<p>This endpoint retrieves all news.</p>
-<h3 id='http-request-8'>HTTP Request</h3>
-<p><code>GET https://circular-hawk-253618.appspot.com/ActualTweets</code></p>
-<h3 id='query-parameters-6'>Query Parameters</h3>
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Default</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>include_cats</td>
-<td>false</td>
-<td>If set to true, the result will also include cats.</td>
-</tr>
-<tr>
-<td>available</td>
-<td>true</td>
-<td>If set to false, the result will include kittens that have already been adopted.</td>
-</tr>
-</tbody></table>
-
-<aside class="success">
-Remember — You can only access the Sensefolio API with your given API allowance.
-</aside>
-<h2 id='get-all-tweets-for-a-specific-company-for-a-specific-topic'>Get All Tweets for a Specific Company for a Specific Topic</h2><div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">requests</span>
-
-<span class="n">apiKey</span> <span class="o">=</span> <span class="s">'Your_API_Key'</span>
-<span class="n">company_idx</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="n">start_date</span> <span class="o">=</span> <span class="s">"2015-01-01"</span>
-<span class="n">end_date</span> <span class="o">=</span> <span class="s">"2020-12-01"</span>
-<span class="n">topic</span> <span class="o">=</span> <span class="s">"business_ethics"</span>
-
-<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s">'x-api-key'</span><span class="p">:</span> <span class="n">apiKey</span><span class="p">,</span>
-           <span class="s">'content-type'</span><span class="p">:</span> <span class="s">'application/json'</span><span class="p">}</span>
-
-<span class="n">companyScore_companyExample_ActualNews</span> <span class="o">=</span> <span class="n">requests</span><span class="p">.</span><span class="n">get</span><span class="p">(</span>
-        <span class="s">"https://circular-hawk-253618.appspot.com/ActualTweets?
-        company_idx="</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">company_idx</span><span class="p">)</span><span class="o">+</span><span class="s">"&amp;
-        start_date=str(start_date)&amp;
-        end_date=str(end_date)&amp;
-        category=&amp;
-        topic=str(topic)&amp;
-        criteria=&amp;
-        word="</span>
-        <span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">).</span><span class="n">json</span><span class="p">()</span>
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">kittn</span><span class="dl">'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="dl">'</span><span class="s1">meowmeowmeow</span><span class="dl">'</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">max</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
-</code></pre></div>
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Max"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unknown"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre></div>
-<p>This endpoint retrieves a news for a specific company and for a specific Sensefolio topic.</p>
-
-<aside class="warning">Inside HTML code blocks like this one, you can't use Markdown, so use <code>&lt;code&gt;</code> blocks to denote code.</aside>
-<h3 id='http-request-9'>HTTP Request</h3>
-<p><code>GET https://circular-hawk-253618.appspot.com/ActualTweets</code></p>
-<h3 id='url-parameters-3'>URL Parameters</h3>
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>ID</td>
-<td>The ID of the kitten to retrieve</td>
-</tr>
-</tbody></table>
-<h1 id='g-company-reviews'>G Company Reviews</h1><h2 id='get-all-g-company-reviews-for-a-specific-company'>Get All G Company Reviews for a Specific Company</h2><div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">requests</span>
-
-<span class="n">apiKey</span> <span class="o">=</span> <span class="s">'Your_API_Key'</span>
-<span class="n">company_idx</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="n">start_date</span> <span class="o">=</span> <span class="s">"2015-01-01"</span>
-<span class="n">end_date</span> <span class="o">=</span> <span class="s">"2020-12-01"</span>
-
-<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s">'x-api-key'</span><span class="p">:</span> <span class="n">apiKey</span><span class="p">,</span>
-           <span class="s">'content-type'</span><span class="p">:</span> <span class="s">'application/json'</span><span class="p">}</span>
-
-<span class="n">companyScore_companyExample_ActualNews</span> <span class="o">=</span> <span class="n">requests</span><span class="p">.</span><span class="n">get</span><span class="p">(</span>
-        <span class="s">"https://circular-hawk-253618.appspot.com/ActualGlassdoor?
-        company_idx="</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">company_idx</span><span class="p">)</span><span class="o">+</span><span class="s">"&amp;
-        start_date=str(start_date)&amp;
-        end_date=str(end_date)&amp;
-        category=&amp;
-        topic=&amp;
-        criteria=&amp;
-        word="</span>
-        <span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">).</span><span class="n">json</span><span class="p">()</span>
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">kittn</span><span class="dl">'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="dl">'</span><span class="s1">meowmeowmeow</span><span class="dl">'</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">kittens</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="kd">get</span><span class="p">();</span>
-</code></pre></div>
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Fluffums"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"calico"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Max"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unknown"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
-  </span><span class="p">}</span><span class="w">
-</span><span class="p">]</span><span class="w">
-</span></code></pre></div>
-<p>This endpoint retrieves all news.</p>
-<h3 id='http-request-10'>HTTP Request</h3>
-<p><code>GET https://circular-hawk-253618.appspot.com/ActualGlassdoor</code></p>
-<h3 id='query-parameters-7'>Query Parameters</h3>
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Default</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>include_cats</td>
-<td>false</td>
-<td>If set to true, the result will also include cats.</td>
-</tr>
-<tr>
-<td>available</td>
-<td>true</td>
-<td>If set to false, the result will include kittens that have already been adopted.</td>
-</tr>
-</tbody></table>
-
-<aside class="success">
-Remember — You can only access the Sensefolio API with your given API allowance.
-</aside>
-<h2 id='get-all-g-company-reviews-for-a-specific-company-for-a-specific-topic'>Get All G Company Reviews for a Specific Company for a Specific Topic</h2><div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">requests</span>
-
-<span class="n">apiKey</span> <span class="o">=</span> <span class="s">'Your_API_Key'</span>
-<span class="n">company_idx</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="n">start_date</span> <span class="o">=</span> <span class="s">"2015-01-01"</span>
-<span class="n">end_date</span> <span class="o">=</span> <span class="s">"2020-12-01"</span>
-<span class="n">topic</span> <span class="o">=</span> <span class="s">"business_ethics"</span>
-
-<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s">'x-api-key'</span><span class="p">:</span> <span class="n">apiKey</span><span class="p">,</span>
-           <span class="s">'content-type'</span><span class="p">:</span> <span class="s">'application/json'</span><span class="p">}</span>
-
-<span class="n">companyScore_companyExample_ActualNews</span> <span class="o">=</span> <span class="n">requests</span><span class="p">.</span><span class="n">get</span><span class="p">(</span>
-        <span class="s">"https://circular-hawk-253618.appspot.com/ActualGlassdoor?
-        company_idx="</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">company_idx</span><span class="p">)</span><span class="o">+</span><span class="s">"&amp;
-        start_date=str(start_date)&amp;
-        end_date=str(end_date)&amp;
-        category=&amp;
-        topic=str(topic)&amp;
-        criteria=&amp;
-        word="</span>
-        <span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">).</span><span class="n">json</span><span class="p">()</span>
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">kittn</span><span class="dl">'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="dl">'</span><span class="s1">meowmeowmeow</span><span class="dl">'</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">max</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
-</code></pre></div>
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Max"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unknown"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre></div>
-<p>This endpoint retrieves a news for a specific company and for a specific Sensefolio topic.</p>
-
-<aside class="warning">Inside HTML code blocks like this one, you can't use Markdown, so use <code>&lt;code&gt;</code> blocks to denote code.</aside>
-<h3 id='http-request-11'>HTTP Request</h3>
-<p><code>GET https://circular-hawk-253618.appspot.com/ActualGlassdoor</code></p>
-<h3 id='url-parameters-4'>URL Parameters</h3>
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>ID</td>
-<td>The ID of the kitten to retrieve</td>
-</tr>
-</tbody></table>
-<h1 id='i-company-reviews'>I Company Reviews</h1><h2 id='get-all-i-company-reviews-for-a-specific-company'>Get All I Company Reviews for a Specific Company</h2><div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">requests</span>
-
-<span class="n">apiKey</span> <span class="o">=</span> <span class="s">'Your_API_Key'</span>
-<span class="n">company_idx</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="n">start_date</span> <span class="o">=</span> <span class="s">"2015-01-01"</span>
-<span class="n">end_date</span> <span class="o">=</span> <span class="s">"2020-12-01"</span>
-
-<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s">'x-api-key'</span><span class="p">:</span> <span class="n">apiKey</span><span class="p">,</span>
-           <span class="s">'content-type'</span><span class="p">:</span> <span class="s">'application/json'</span><span class="p">}</span>
-
-<span class="n">companyScore_companyExample_ActualNews</span> <span class="o">=</span> <span class="n">requests</span><span class="p">.</span><span class="n">get</span><span class="p">(</span>
-        <span class="s">"https://circular-hawk-253618.appspot.com/ActualIndeed?
-        company_idx="</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">company_idx</span><span class="p">)</span><span class="o">+</span><span class="s">"&amp;
-        start_date=str(start_date)&amp;
-        end_date=str(end_date)&amp;
-        category=&amp;
-        topic=&amp;
-        criteria=&amp;
-        word="</span>
-        <span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">).</span><span class="n">json</span><span class="p">()</span>
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">kittn</span><span class="dl">'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="dl">'</span><span class="s1">meowmeowmeow</span><span class="dl">'</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">kittens</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="kd">get</span><span class="p">();</span>
-</code></pre></div>
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Fluffums"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"calico"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Max"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unknown"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
-  </span><span class="p">}</span><span class="w">
-</span><span class="p">]</span><span class="w">
-</span></code></pre></div>
-<p>This endpoint retrieves all news.</p>
-<h3 id='http-request-12'>HTTP Request</h3>
-<p><code>GET https://circular-hawk-253618.appspot.com/ActualIndeed</code></p>
-<h3 id='query-parameters-8'>Query Parameters</h3>
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Default</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>include_cats</td>
-<td>false</td>
-<td>If set to true, the result will also include cats.</td>
-</tr>
-<tr>
-<td>available</td>
-<td>true</td>
-<td>If set to false, the result will include kittens that have already been adopted.</td>
-</tr>
-</tbody></table>
-
-<aside class="success">
-Remember — You can only access the Sensefolio API with your given API allowance.
-</aside>
-<h2 id='get-all-i-company-reviews-for-a-specific-company-for-a-specific-topic'>Get All I Company Reviews for a Specific Company for a Specific Topic</h2><div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">requests</span>
-
-<span class="n">apiKey</span> <span class="o">=</span> <span class="s">'Your_API_Key'</span>
-<span class="n">company_idx</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="n">start_date</span> <span class="o">=</span> <span class="s">"2015-01-01"</span>
-<span class="n">end_date</span> <span class="o">=</span> <span class="s">"2020-12-01"</span>
-<span class="n">topic</span> <span class="o">=</span> <span class="s">"business_ethics"</span>
-
-<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s">'x-api-key'</span><span class="p">:</span> <span class="n">apiKey</span><span class="p">,</span>
-           <span class="s">'content-type'</span><span class="p">:</span> <span class="s">'application/json'</span><span class="p">}</span>
-
-<span class="n">companyScore_companyExample_ActualNews</span> <span class="o">=</span> <span class="n">requests</span><span class="p">.</span><span class="n">get</span><span class="p">(</span>
-        <span class="s">"https://circular-hawk-253618.appspot.com/ActualIndeed?
-        company_idx="</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">company_idx</span><span class="p">)</span><span class="o">+</span><span class="s">"&amp;
-        start_date=str(start_date)&amp;
-        end_date=str(end_date)&amp;
-        category=&amp;
-        topic=str(topic)&amp;
-        criteria=&amp;
-        word="</span>
-        <span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">).</span><span class="n">json</span><span class="p">()</span>
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">kittn</span><span class="dl">'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="dl">'</span><span class="s1">meowmeowmeow</span><span class="dl">'</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">max</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
-</code></pre></div>
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Max"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unknown"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre></div>
-<p>This endpoint retrieves a news for a specific company and for a specific Sensefolio topic.</p>
-
-<aside class="warning">Inside HTML code blocks like this one, you can't use Markdown, so use <code>&lt;code&gt;</code> blocks to denote code.</aside>
-<h3 id='http-request-13'>HTTP Request</h3>
-<p><code>GET https://circular-hawk-253618.appspot.com/ActualIndeed</code></p>
-<h3 id='url-parameters-5'>URL Parameters</h3>
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>ID</td>
-<td>The ID of the kitten to retrieve</td>
-</tr>
-</tbody></table>
-<h1 id='carbon-disclosure'>Carbon Disclosure</h1><h2 id='get-all-carbon-disclosure-information-for-a-specific-company'>Get All Carbon Disclosure Information for a Specific Company</h2><div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">requests</span>
-
-<span class="n">apiKey</span> <span class="o">=</span> <span class="s">'Your_API_Key'</span>
-<span class="n">company_idx</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="n">start_date</span> <span class="o">=</span> <span class="s">"2015-01-01"</span>
-<span class="n">end_date</span> <span class="o">=</span> <span class="s">"2020-12-01"</span>
-
-<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s">'x-api-key'</span><span class="p">:</span> <span class="n">apiKey</span><span class="p">,</span>
-           <span class="s">'content-type'</span><span class="p">:</span> <span class="s">'application/json'</span><span class="p">}</span>
-
-<span class="n">companyScore_companyExample_ActualNews</span> <span class="o">=</span> <span class="n">requests</span><span class="p">.</span><span class="n">get</span><span class="p">(</span>
-        <span class="s">"https://circular-hawk-253618.appspot.com/ActualCDP?
-        company_idx="</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">company_idx</span><span class="p">)</span><span class="o">+</span><span class="s">"&amp;
-        start_date=str(start_date)&amp;
-        end_date=str(end_date)&amp;
-        category=&amp;
-        topic=&amp;
-        criteria=&amp;
-        word="</span>
-        <span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">).</span><span class="n">json</span><span class="p">()</span>
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">kittn</span><span class="dl">'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="dl">'</span><span class="s1">meowmeowmeow</span><span class="dl">'</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">kittens</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="kd">get</span><span class="p">();</span>
-</code></pre></div>
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Fluffums"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"calico"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Max"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unknown"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
-  </span><span class="p">}</span><span class="w">
-</span><span class="p">]</span><span class="w">
-</span></code></pre></div>
-<p>This endpoint retrieves all news.</p>
-<h3 id='http-request-14'>HTTP Request</h3>
-<p><code>GET https://circular-hawk-253618.appspot.com/ActualCDP</code></p>
-<h3 id='query-parameters-9'>Query Parameters</h3>
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Default</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>include_cats</td>
-<td>false</td>
-<td>If set to true, the result will also include cats.</td>
-</tr>
-<tr>
-<td>available</td>
-<td>true</td>
-<td>If set to false, the result will include kittens that have already been adopted.</td>
-</tr>
-</tbody></table>
-
-<aside class="success">
-Remember — You can only access the Sensefolio API with your given API allowance.
-</aside>
-<h2 id='get-all-carbon-disclosure-information-for-a-specific-company-for-a-specific-topic'>Get All Carbon Disclosure Information for a Specific Company for a Specific Topic</h2><div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">requests</span>
-
-<span class="n">apiKey</span> <span class="o">=</span> <span class="s">'Your_API_Key'</span>
-<span class="n">company_idx</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="n">start_date</span> <span class="o">=</span> <span class="s">"2015-01-01"</span>
-<span class="n">end_date</span> <span class="o">=</span> <span class="s">"2020-12-01"</span>
-<span class="n">topic</span> <span class="o">=</span> <span class="s">"business_ethics"</span>
-
-<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s">'x-api-key'</span><span class="p">:</span> <span class="n">apiKey</span><span class="p">,</span>
-           <span class="s">'content-type'</span><span class="p">:</span> <span class="s">'application/json'</span><span class="p">}</span>
-
-<span class="n">companyScore_companyExample_ActualNews</span> <span class="o">=</span> <span class="n">requests</span><span class="p">.</span><span class="n">get</span><span class="p">(</span>
-        <span class="s">"https://circular-hawk-253618.appspot.com/ActualCDP?
-        company_idx="</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">company_idx</span><span class="p">)</span><span class="o">+</span><span class="s">"&amp;
-        start_date=str(start_date)&amp;
-        end_date=str(end_date)&amp;
-        category=&amp;
-        topic=str(topic)&amp;
-        criteria=&amp;
-        word="</span>
-        <span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">).</span><span class="n">json</span><span class="p">()</span>
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">kittn</span><span class="dl">'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="dl">'</span><span class="s1">meowmeowmeow</span><span class="dl">'</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">max</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
-</code></pre></div>
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Max"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unknown"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre></div>
-<p>This endpoint retrieves a news for a specific company and for a specific Sensefolio topic.</p>
-
-<aside class="warning">Inside HTML code blocks like this one, you can't use Markdown, so use <code>&lt;code&gt;</code> blocks to denote code.</aside>
-<h3 id='http-request-15'>HTTP Request</h3>
-<p><code>GET https://circular-hawk-253618.appspot.com/ActualCDP</code></p>
-<h3 id='url-parameters-6'>URL Parameters</h3>
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>ID</td>
-<td>The ID of the kitten to retrieve</td>
-</tr>
-</tbody></table>
-<h1 id='violation-tracker'>Violation Tracker</h1><h2 id='get-all-violation-information-for-a-specific-company'>Get All Violation Information for a Specific Company</h2><div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">requests</span>
-
-<span class="n">apiKey</span> <span class="o">=</span> <span class="s">'Your_API_Key'</span>
-<span class="n">company_idx</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="n">start_date</span> <span class="o">=</span> <span class="s">"2015-01-01"</span>
-<span class="n">end_date</span> <span class="o">=</span> <span class="s">"2020-12-01"</span>
-
-<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s">'x-api-key'</span><span class="p">:</span> <span class="n">apiKey</span><span class="p">,</span>
-           <span class="s">'content-type'</span><span class="p">:</span> <span class="s">'application/json'</span><span class="p">}</span>
-
-<span class="n">companyScore_companyExample_ActualNews</span> <span class="o">=</span> <span class="n">requests</span><span class="p">.</span><span class="n">get</span><span class="p">(</span>
-        <span class="s">"https://circular-hawk-253618.appspot.com/ActualViolationTracker?
-        company_idx="</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">company_idx</span><span class="p">)</span><span class="o">+</span><span class="s">"&amp;
-        start_date=str(start_date)&amp;
-        end_date=str(end_date)&amp;
-        category=&amp;
-        topic=&amp;
-        criteria=&amp;
-        word="</span>
-        <span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">).</span><span class="n">json</span><span class="p">()</span>
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">kittn</span><span class="dl">'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="dl">'</span><span class="s1">meowmeowmeow</span><span class="dl">'</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">kittens</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="kd">get</span><span class="p">();</span>
-</code></pre></div>
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Fluffums"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"calico"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Max"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unknown"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
-  </span><span class="p">}</span><span class="w">
-</span><span class="p">]</span><span class="w">
-</span></code></pre></div>
-<p>This endpoint retrieves all news.</p>
-<h3 id='http-request-16'>HTTP Request</h3>
-<p><code>GET https://circular-hawk-253618.appspot.com/ActualViolationTracker</code></p>
-<h3 id='query-parameters-10'>Query Parameters</h3>
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Default</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>include_cats</td>
-<td>false</td>
-<td>If set to true, the result will also include cats.</td>
-</tr>
-<tr>
-<td>available</td>
-<td>true</td>
-<td>If set to false, the result will include kittens that have already been adopted.</td>
-</tr>
-</tbody></table>
-
-<aside class="success">
-Remember — You can only access the Sensefolio API with your given API allowance.
-</aside>
-<h2 id='get-all-violation-information-for-a-specific-company-for-a-specific-topic'>Get All Violation Information for a Specific Company for a Specific Topic</h2><div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">requests</span>
-
-<span class="n">apiKey</span> <span class="o">=</span> <span class="s">'Your_API_Key'</span>
-<span class="n">company_idx</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="n">start_date</span> <span class="o">=</span> <span class="s">"2015-01-01"</span>
-<span class="n">end_date</span> <span class="o">=</span> <span class="s">"2020-12-01"</span>
-<span class="n">topic</span> <span class="o">=</span> <span class="s">"business_ethics"</span>
-
-<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s">'x-api-key'</span><span class="p">:</span> <span class="n">apiKey</span><span class="p">,</span>
-           <span class="s">'content-type'</span><span class="p">:</span> <span class="s">'application/json'</span><span class="p">}</span>
-
-<span class="n">companyScore_companyExample_ActualNews</span> <span class="o">=</span> <span class="n">requests</span><span class="p">.</span><span class="n">get</span><span class="p">(</span>
-        <span class="s">"https://circular-hawk-253618.appspot.com/ActualViolationTracker?
-        company_idx="</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">company_idx</span><span class="p">)</span><span class="o">+</span><span class="s">"&amp;
-        start_date=str(start_date)&amp;
-        end_date=str(end_date)&amp;
-        category=&amp;
-        topic=str(topic)&amp;
-        criteria=&amp;
-        word="</span>
-        <span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">).</span><span class="n">json</span><span class="p">()</span>
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">kittn</span><span class="dl">'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="dl">'</span><span class="s1">meowmeowmeow</span><span class="dl">'</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">max</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
-</code></pre></div>
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Max"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unknown"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre></div>
-<p>This endpoint retrieves a news for a specific company and for a specific Sensefolio topic.</p>
-
-<aside class="warning">Inside HTML code blocks like this one, you can't use Markdown, so use <code>&lt;code&gt;</code> blocks to denote code.</aside>
-<h3 id='http-request-17'>HTTP Request</h3>
-<p><code>GET https://circular-hawk-253618.appspot.com/ActualViolationTracker</code></p>
-<h3 id='url-parameters-7'>URL Parameters</h3>
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>ID</td>
-<td>The ID of the kitten to retrieve</td>
+<td>The ID of the kitten to delete</td>
 </tr>
 </tbody></table>
 <h1 id='errors'>Errors</h1>
@@ -1672,6 +581,8 @@ This error section is stored in a separate file in <code>includes/_errors.md</co
       </div>
       <div class="dark-box">
           <div class="lang-selector">
+                <a href="#" data-language-name="shell">shell</a>
+                <a href="#" data-language-name="ruby">ruby</a>
                 <a href="#" data-language-name="python">python</a>
                 <a href="#" data-language-name="javascript">javascript</a>
           </div>
