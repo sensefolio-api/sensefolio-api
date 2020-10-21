@@ -45,12 +45,21 @@ headers = {'x-api-key': apiKey,
 ```
 
 ```javascript
-const kittn = require('kittn');
+var settings = {
+  "method": "GET",
+  "timeout": 0,
+  "headers": {
+    "Api-key": "Your_API_Key",
+    "Accept": "application/json",
+  },
+};
 
-let api = kittn.authorize('meowmeowmeow');
+$.ajax(settings).done(function (response) {
+  console.log(response);
+});
 ```
 
-> Make sure to replace `meowmeowmeow` with your API key.
+> Make sure to replace `Your_API_Key` with your API key.
 
 Sensefolio uses API keys to allow access to the API. 
 To request an API Key, please contact <contact@sensefolio.com> or visit <a href='https://sensefolio.com/'>sensefolio.com</a>
@@ -91,23 +100,25 @@ headers = {'x-api-key': apiKey,
            'content-type': 'application/json'}
 
 companyScore_companyExample_ActualNews = requests.get(
-        "https://circular-hawk-253618.appspot.com/companyInfoFull?
-        company_idx="+str(company_idx)+"&
-        start_date=str(start_date)&
-        end_date=str(end_date)&
-        category=&
-        topic=&
-        criteria=&
-        word="
-        , headers=headers).json()
+        "https://circular-hawk-253618.appspot.com/companyInfoFull/, 
+        headers=headers).json()
 ```
 
 
 ```javascript
-const kittn = require('kittn');
+var settings = {
+  "url": "https://circular-hawk-253618.appspot.com/companyInfoFull/",
+  "method": "GET",
+  "timeout": 0,
+  "headers": {
+    "Api-key": "Your_API_Key",
+    "Accept": "application/json",
+  },
+};
 
-let api = kittn.authorize('meowmeowmeow');
-let kittens = api.kittens.get();
+$.ajax(settings).done(function (response) {
+  console.log(response);
+});
 ```
 
 > The above command returns JSON structured like this:
@@ -187,22 +198,7 @@ let kittens = api.kittens.get();
 > The above command returns JSON structured like this:
 
 ```json
-[
-  {
-    "id": 1,
-    "name": "Fluffums",
-    "breed": "calico",
-    "fluffiness": 6,
-    "cuteness": 7
-  },
-  {
-    "id": 2,
-    "name": "Max",
-    "breed": "unknown",
-    "fluffiness": 5,
-    "cuteness": 10
-  }
-]
+
 ```
 
 This endpoint retrieves all news.
@@ -270,7 +266,6 @@ let max = api.kittens.get(2);
 
 This endpoint retrieves a news for a specific company and for a specific Sensefolio topic.
 
-<aside class="warning">Inside HTML code blocks like this one, you can't use Markdown, so use <code>&lt;code&gt;</code> blocks to denote code.</aside>
 
 ### HTTP Request
 
@@ -605,13 +600,135 @@ let max = api.kittens.get(2);
 > The above command returns JSON structured like this:
 
 ```json
-{
-  "id": 2,
-  "name": "Max",
-  "breed": "unknown",
-  "fluffiness": 5,
-  "cuteness": 10
-}
+[
+  {  '_1_1_1_AirQuality_List': None,
+     '_1_1_2_ComplianceEnvironmentalRegulations_List': None,
+     '_1_1_3_EnergyMgmt_List': None,
+     '_1_1_4_FuelMgmt_List': None,
+     '_1_1_5_GHGemissions_List': None,
+     '_1_2_1_EnvironmentalImpactsAssetsOperations_List': None,
+     '_1_2_2_SupplierEnvironmentalAssessment_List': None,
+     '_1_2_3_EnvironBusinessDevelopment_List': None,
+     '_1_2_4_EvaluationEnvironKPI_List': None,
+     '_1_2_5_LifecycleImpactsProductsServices_List': None,
+     '_1_2_6_ProductPackaging_List': None,
+     '_1_2_7_ProductQualitySafety_List': 45.6438,
+     '_1_2_8_ResponsibleConsumptionProduction_List': None,
+     '_1_3_1_BiodiversityImpacts_List': None,
+     '_1_3_2_WaterWastewaterMgmt_List': None,
+     '_1_3_3_WasteHazardousMaterialsMgmt_List': None,
+     '_2_1_1_HealthSafety_List': 9.5,
+     '_2_2_1_FairLaborPractices_List': 39.4787,
+     '_2_2_2_LaborMgmtRelations_List': 36.6572,
+     '_2_2_3_TrainingEducation_List': 40.2849,
+     '_2_2_4_DiversityEqualOpportunity_List': 39.8905,
+     '_2_2_5_CompensationBenefits_List': 36.4794,
+     '_2_2_6_RecruitmentDevelopmentRetention_List': 40.0974,
+     '_2_3_1_AccessAffordability_List': None,
+     '_2_3_2_CustomerHealthSafety_List': None,
+     '_2_3_3_CustomerPrivacy_List': None,
+     '_2_3_4_FairDisclosureLabeling_List': None,
+     '_2_3_5_FairMarketingAdvertising_List': None,
+     '_2_3_6_LocalCommunities_List': 37.046,
+     '_2_3_7_SocialImpactsAssetsOperations_List': 43.4955,
+     '_2_4_1_ChildLabor_List': 27.98,
+     '_2_4_2_FreedomAssociationCollectiveBargaining_List': 16.9933,
+     '_2_4_3_HumanRights_List': 29.9267,
+     '_2_4_4_NonDiscrimination_List': 39.4199,
+     '_2_4_5_RightsIndigenousPeoples_List': 15.3267,
+     '_3_1_1_BoardLeadership_List': 39.8389,
+     '_3_1_2_CeoExecutiveLeadership_List': 40.2633,
+     '_3_1_3_ManagementLeadership_List': 40.1722,
+     '_3_1_4_InternalControlRisks_List': 37.0,
+     '_3_2_1_EconomicPerformance_List': 37.6667,
+     '_3_2_2_IndustryInnovationInfrastructure_List': 34.3333,
+     '_3_2_3_MarketPresence_List': 38.3333,
+     '_3_3_1_IndirectEconomicImpacts_List': 38.3333,
+     '_3_3_2_Partnerships_List': 9.0,
+     '_3_3_3_PeaceJusticeInstitutions_List': None,
+     '_3_3_4_Transparency_List': None,
+     '_3_4_1_AntiCorruptionPolicies_List': None,
+     '_3_4_2_AntiCompetitiveBehavior_List': None,
+     '_3_4_3_BusinessEthicsTransparencyPayments_List': None,
+     '_3_4_4_RegulatoryCapturePoliticalInfluence_List': 44.3051,
+     'company_idx': 1,
+     'criticalCountries_List': 0,
+     'noAccountingControv_List': 0,
+     'noAntiCompetition_List': 0,
+     'noBusinessEthics_List': 0,
+     'noChildLabor_List': 0,
+     'noEnvironmentControv_List': 0,
+     'noHumanRights_List': 0,
+     'noIPcontrov_List': 0,
+     'noInsiderTrading_List': 0,
+     'noMgmtCompensation_List': 0,
+     'noMgmtDepartures_List': 0,
+     'noPrivacyControv_List': 0,
+     'noResponsibleMarketing_List': 0,
+     'noTax_List': 0,
+     'noWorkingCondition_List': 1,
+     'nocustomerHealthSafety_List': 0,
+     'provider': 'Shacknews',
+     'relevancy10_List': 0.0,
+     'relevancy11_List': 0.0,
+     'relevancy12_List': 0.08,
+     'relevancy13_List': 0.0,
+     'relevancy14_List': 0.0,
+     'relevancy15_List': 0.0,
+     'relevancy16_List': 0.0,
+     'relevancy17_List': 0.0,
+     'relevancy18_List': 0.12,
+     'relevancy19_List': 0.07,
+     'relevancy1_List': 0.0,
+     'relevancy20_List': 0.11,
+     'relevancy21_List': 0.12,
+     'relevancy22_List': 0.0,
+     'relevancy23_List': 0.11,
+     'relevancy24_List': 0.0,
+     'relevancy25_List': 0.0,
+     'relevancy26_List': 0.0,
+     'relevancy27_List': 0.0,
+     'relevancy28_List': 0.0,
+     'relevancy29_List': 0.08,
+     'relevancy2_List': 0.0,
+     'relevancy30_List': 0.11,
+     'relevancy31_List': 0.0,
+     'relevancy32_List': 0.0,
+     'relevancy33_List': 0.0,
+     'relevancy34_List': 0.12,
+     'relevancy35_List': 0.0,
+     'relevancy36_List': 0.0,
+     'relevancy37_List': 0.0,
+     'relevancy38_List': 0.0,
+     'relevancy39_List': 0.0,
+     'relevancy3_List': 0.0,
+     'relevancy40_List': 0.0,
+     'relevancy41_List': 0.0,
+     'relevancy42_List': 0.0,
+     'relevancy43_List': 0.0,
+     'relevancy44_List': 0.0,
+     'relevancy45_List': 0.0,
+     'relevancy46_List': 0.0,
+     'relevancy47_List': 0.0,
+     'relevancy48_List': 0.0,
+     'relevancy49_List': 0.0,
+     'relevancy4_List': 0.0,
+     'relevancy50_List': 0.08,
+     'relevancy5_List': 0.0,
+     'relevancy6_List': 0.0,
+     'relevancy7_List': 0.0,
+     'relevancy8_List': 0.0,
+     'relevancy9_List': 0.0,
+     'relevancy_List': 75.0,
+     'summary': '... power to cancel contracts with firms found to be organizing training \nrelated to racial diversity, sexual identity, or gender identity. In its \nstatement, Microsoft said:.',
+     'timestamp': '2020-10-07 00:00:00',
+     'title': 'Microsoft responds to Labor Department probe over diversity policy',
+     'topics': '30,18,21,34,20,23,50,12,29,19,22,36,38,33,37,32,35,39,40,41,42,43,',
+     'url': 'https://www.shacknews.com/article/120774/microsoft-responds-to-labor-department-probe-over-diversity-policy',
+     'words': '490,604,79,323,75,356,383,173,338,430,331,21,170,281,582,249,,'
+ },
+ [...]
+]
 ```
 
 This endpoint retrieves a news for a specific company and for a specific Sensefolio topic.
