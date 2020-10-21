@@ -447,12 +447,21 @@ Any questions on the Sensefolio ESG Data? Please contact us: <a href="mailto:con
 
 <span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s">'x-api-key'</span><span class="p">:</span> <span class="n">apiKey</span><span class="p">,</span>
            <span class="s">'content-type'</span><span class="p">:</span> <span class="s">'application/json'</span><span class="p">}</span>
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">kittn</span><span class="dl">'</span><span class="p">);</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">var</span> <span class="nx">settings</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="dl">"</span><span class="s2">method</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">GET</span><span class="dl">"</span><span class="p">,</span>
+  <span class="dl">"</span><span class="s2">timeout</span><span class="dl">"</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+  <span class="dl">"</span><span class="s2">headers</span><span class="dl">"</span><span class="p">:</span> <span class="p">{</span>
+    <span class="dl">"</span><span class="s2">Api-key</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Your_API_Key</span><span class="dl">"</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">Accept</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">application/json</span><span class="dl">"</span><span class="p">,</span>
+  <span class="p">},</span>
+<span class="p">};</span>
 
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="dl">'</span><span class="s1">meowmeowmeow</span><span class="dl">'</span><span class="p">);</span>
+<span class="nx">$</span><span class="p">.</span><span class="nx">ajax</span><span class="p">(</span><span class="nx">settings</span><span class="p">).</span><span class="nx">done</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">response</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">);</span>
+<span class="p">});</span>
 </code></pre></div>
 <blockquote>
-<p>Make sure to replace <code>meowmeowmeow</code> with your API key.</p>
+<p>Make sure to replace <code>Your_API_Key</code> with your API key.</p>
 </blockquote>
 
 <p>Sensefolio uses API keys to allow access to the API. 
@@ -486,19 +495,21 @@ Note: Making HTTP requests on the client side with Javascript is currently prohi
            <span class="s">'content-type'</span><span class="p">:</span> <span class="s">'application/json'</span><span class="p">}</span>
 
 <span class="n">companyScore_companyExample_ActualNews</span> <span class="o">=</span> <span class="n">requests</span><span class="p">.</span><span class="n">get</span><span class="p">(</span>
-        <span class="s">"https://circular-hawk-253618.appspot.com/companyInfoFull?
-        company_idx="</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">company_idx</span><span class="p">)</span><span class="o">+</span><span class="s">"&amp;
-        start_date=str(start_date)&amp;
-        end_date=str(end_date)&amp;
-        category=&amp;
-        topic=&amp;
-        criteria=&amp;
-        word="</span>
-        <span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">).</span><span class="n">json</span><span class="p">()</span>
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">kittn</span><span class="dl">'</span><span class="p">);</span>
+        <span class="s">"https://circular-hawk-253618.appspot.com/companyInfoFull/, 
+        headers=headers).json()
+</span></code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">var</span> <span class="nx">settings</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="dl">"</span><span class="s2">url</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">https://circular-hawk-253618.appspot.com/companyInfoFull/</span><span class="dl">"</span><span class="p">,</span>
+  <span class="dl">"</span><span class="s2">method</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">GET</span><span class="dl">"</span><span class="p">,</span>
+  <span class="dl">"</span><span class="s2">timeout</span><span class="dl">"</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+  <span class="dl">"</span><span class="s2">headers</span><span class="dl">"</span><span class="p">:</span> <span class="p">{</span>
+    <span class="dl">"</span><span class="s2">Api-key</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Your_API_Key</span><span class="dl">"</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">Accept</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">application/json</span><span class="dl">"</span><span class="p">,</span>
+  <span class="p">},</span>
+<span class="p">};</span>
 
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="dl">'</span><span class="s1">meowmeowmeow</span><span class="dl">'</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">kittens</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="kd">get</span><span class="p">();</span>
+<span class="nx">$</span><span class="p">.</span><span class="nx">ajax</span><span class="p">(</span><span class="nx">settings</span><span class="p">).</span><span class="nx">done</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">response</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">);</span>
+<span class="p">});</span>
 </code></pre></div>
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
@@ -570,22 +581,7 @@ Note: Making HTTP requests on the client side with Javascript is currently prohi
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
 </blockquote>
-<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Fluffums"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"calico"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Max"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unknown"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
-  </span><span class="p">}</span><span class="w">
-</span><span class="p">]</span><span class="w">
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="w">
 </span></code></pre></div>
 <p>This endpoint retrieves all news.</p>
 <h3 id='http-request-2'>HTTP Request</h3>
@@ -651,8 +647,6 @@ Remember — You can only access the Sensefolio API with your given API allowanc
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div>
 <p>This endpoint retrieves a news for a specific company and for a specific Sensefolio topic.</p>
-
-<aside class="warning">Inside HTML code blocks like this one, you can't use Markdown, so use <code>&lt;code&gt;</code> blocks to denote code.</aside>
 <h3 id='http-request-3'>HTTP Request</h3>
 <p><code>GET https://circular-hawk-253618.appspot.com/companyScore</code></p>
 <h3 id='url-parameters'>URL Parameters</h3>
@@ -960,13 +954,135 @@ Remember — You can only access the Sensefolio API with your given API allowanc
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
 </blockquote>
-<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Max"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unknown"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
-</span><span class="p">}</span><span class="w">
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">  </span><span class="err">'_</span><span class="mi">1</span><span class="err">_</span><span class="mi">1</span><span class="err">_</span><span class="mi">1</span><span class="err">_AirQuality_List':</span><span class="w"> </span><span class="err">None</span><span class="p">,</span><span class="w">
+     </span><span class="err">'_</span><span class="mi">1</span><span class="err">_</span><span class="mi">1</span><span class="err">_</span><span class="mi">2</span><span class="err">_ComplianceEnvironmentalRegulations_List':</span><span class="w"> </span><span class="err">None</span><span class="p">,</span><span class="w">
+     </span><span class="err">'_</span><span class="mi">1</span><span class="err">_</span><span class="mi">1</span><span class="err">_</span><span class="mi">3</span><span class="err">_EnergyMgmt_List':</span><span class="w"> </span><span class="err">None</span><span class="p">,</span><span class="w">
+     </span><span class="err">'_</span><span class="mi">1</span><span class="err">_</span><span class="mi">1</span><span class="err">_</span><span class="mi">4</span><span class="err">_FuelMgmt_List':</span><span class="w"> </span><span class="err">None</span><span class="p">,</span><span class="w">
+     </span><span class="err">'_</span><span class="mi">1</span><span class="err">_</span><span class="mi">1</span><span class="err">_</span><span class="mi">5</span><span class="err">_GHGemissions_List':</span><span class="w"> </span><span class="err">None</span><span class="p">,</span><span class="w">
+     </span><span class="err">'_</span><span class="mi">1</span><span class="err">_</span><span class="mi">2</span><span class="err">_</span><span class="mi">1</span><span class="err">_EnvironmentalImpactsAssetsOperations_List':</span><span class="w"> </span><span class="err">None</span><span class="p">,</span><span class="w">
+     </span><span class="err">'_</span><span class="mi">1</span><span class="err">_</span><span class="mi">2</span><span class="err">_</span><span class="mi">2</span><span class="err">_SupplierEnvironmentalAssessment_List':</span><span class="w"> </span><span class="err">None</span><span class="p">,</span><span class="w">
+     </span><span class="err">'_</span><span class="mi">1</span><span class="err">_</span><span class="mi">2</span><span class="err">_</span><span class="mi">3</span><span class="err">_EnvironBusinessDevelopment_List':</span><span class="w"> </span><span class="err">None</span><span class="p">,</span><span class="w">
+     </span><span class="err">'_</span><span class="mi">1</span><span class="err">_</span><span class="mi">2</span><span class="err">_</span><span class="mi">4</span><span class="err">_EvaluationEnvironKPI_List':</span><span class="w"> </span><span class="err">None</span><span class="p">,</span><span class="w">
+     </span><span class="err">'_</span><span class="mi">1</span><span class="err">_</span><span class="mi">2</span><span class="err">_</span><span class="mi">5</span><span class="err">_LifecycleImpactsProductsServices_List':</span><span class="w"> </span><span class="err">None</span><span class="p">,</span><span class="w">
+     </span><span class="err">'_</span><span class="mi">1</span><span class="err">_</span><span class="mi">2</span><span class="err">_</span><span class="mi">6</span><span class="err">_ProductPackaging_List':</span><span class="w"> </span><span class="err">None</span><span class="p">,</span><span class="w">
+     </span><span class="err">'_</span><span class="mi">1</span><span class="err">_</span><span class="mi">2</span><span class="err">_</span><span class="mi">7</span><span class="err">_ProductQualitySafety_List':</span><span class="w"> </span><span class="mf">45.6438</span><span class="p">,</span><span class="w">
+     </span><span class="err">'_</span><span class="mi">1</span><span class="err">_</span><span class="mi">2</span><span class="err">_</span><span class="mi">8</span><span class="err">_ResponsibleConsumptionProduction_List':</span><span class="w"> </span><span class="err">None</span><span class="p">,</span><span class="w">
+     </span><span class="err">'_</span><span class="mi">1</span><span class="err">_</span><span class="mi">3</span><span class="err">_</span><span class="mi">1</span><span class="err">_BiodiversityImpacts_List':</span><span class="w"> </span><span class="err">None</span><span class="p">,</span><span class="w">
+     </span><span class="err">'_</span><span class="mi">1</span><span class="err">_</span><span class="mi">3</span><span class="err">_</span><span class="mi">2</span><span class="err">_WaterWastewaterMgmt_List':</span><span class="w"> </span><span class="err">None</span><span class="p">,</span><span class="w">
+     </span><span class="err">'_</span><span class="mi">1</span><span class="err">_</span><span class="mi">3</span><span class="err">_</span><span class="mi">3</span><span class="err">_WasteHazardousMaterialsMgmt_List':</span><span class="w"> </span><span class="err">None</span><span class="p">,</span><span class="w">
+     </span><span class="err">'_</span><span class="mi">2</span><span class="err">_</span><span class="mi">1</span><span class="err">_</span><span class="mi">1</span><span class="err">_HealthSafety_List':</span><span class="w"> </span><span class="mf">9.5</span><span class="p">,</span><span class="w">
+     </span><span class="err">'_</span><span class="mi">2</span><span class="err">_</span><span class="mi">2</span><span class="err">_</span><span class="mi">1</span><span class="err">_FairLaborPractices_List':</span><span class="w"> </span><span class="mf">39.4787</span><span class="p">,</span><span class="w">
+     </span><span class="err">'_</span><span class="mi">2</span><span class="err">_</span><span class="mi">2</span><span class="err">_</span><span class="mi">2</span><span class="err">_LaborMgmtRelations_List':</span><span class="w"> </span><span class="mf">36.6572</span><span class="p">,</span><span class="w">
+     </span><span class="err">'_</span><span class="mi">2</span><span class="err">_</span><span class="mi">2</span><span class="err">_</span><span class="mi">3</span><span class="err">_TrainingEducation_List':</span><span class="w"> </span><span class="mf">40.2849</span><span class="p">,</span><span class="w">
+     </span><span class="err">'_</span><span class="mi">2</span><span class="err">_</span><span class="mi">2</span><span class="err">_</span><span class="mi">4</span><span class="err">_DiversityEqualOpportunity_List':</span><span class="w"> </span><span class="mf">39.8905</span><span class="p">,</span><span class="w">
+     </span><span class="err">'_</span><span class="mi">2</span><span class="err">_</span><span class="mi">2</span><span class="err">_</span><span class="mi">5</span><span class="err">_CompensationBenefits_List':</span><span class="w"> </span><span class="mf">36.4794</span><span class="p">,</span><span class="w">
+     </span><span class="err">'_</span><span class="mi">2</span><span class="err">_</span><span class="mi">2</span><span class="err">_</span><span class="mi">6</span><span class="err">_RecruitmentDevelopmentRetention_List':</span><span class="w"> </span><span class="mf">40.0974</span><span class="p">,</span><span class="w">
+     </span><span class="err">'_</span><span class="mi">2</span><span class="err">_</span><span class="mi">3</span><span class="err">_</span><span class="mi">1</span><span class="err">_AccessAffordability_List':</span><span class="w"> </span><span class="err">None</span><span class="p">,</span><span class="w">
+     </span><span class="err">'_</span><span class="mi">2</span><span class="err">_</span><span class="mi">3</span><span class="err">_</span><span class="mi">2</span><span class="err">_CustomerHealthSafety_List':</span><span class="w"> </span><span class="err">None</span><span class="p">,</span><span class="w">
+     </span><span class="err">'_</span><span class="mi">2</span><span class="err">_</span><span class="mi">3</span><span class="err">_</span><span class="mi">3</span><span class="err">_CustomerPrivacy_List':</span><span class="w"> </span><span class="err">None</span><span class="p">,</span><span class="w">
+     </span><span class="err">'_</span><span class="mi">2</span><span class="err">_</span><span class="mi">3</span><span class="err">_</span><span class="mi">4</span><span class="err">_FairDisclosureLabeling_List':</span><span class="w"> </span><span class="err">None</span><span class="p">,</span><span class="w">
+     </span><span class="err">'_</span><span class="mi">2</span><span class="err">_</span><span class="mi">3</span><span class="err">_</span><span class="mi">5</span><span class="err">_FairMarketingAdvertising_List':</span><span class="w"> </span><span class="err">None</span><span class="p">,</span><span class="w">
+     </span><span class="err">'_</span><span class="mi">2</span><span class="err">_</span><span class="mi">3</span><span class="err">_</span><span class="mi">6</span><span class="err">_LocalCommunities_List':</span><span class="w"> </span><span class="mf">37.046</span><span class="p">,</span><span class="w">
+     </span><span class="err">'_</span><span class="mi">2</span><span class="err">_</span><span class="mi">3</span><span class="err">_</span><span class="mi">7</span><span class="err">_SocialImpactsAssetsOperations_List':</span><span class="w"> </span><span class="mf">43.4955</span><span class="p">,</span><span class="w">
+     </span><span class="err">'_</span><span class="mi">2</span><span class="err">_</span><span class="mi">4</span><span class="err">_</span><span class="mi">1</span><span class="err">_ChildLabor_List':</span><span class="w"> </span><span class="mf">27.98</span><span class="p">,</span><span class="w">
+     </span><span class="err">'_</span><span class="mi">2</span><span class="err">_</span><span class="mi">4</span><span class="err">_</span><span class="mi">2</span><span class="err">_FreedomAssociationCollectiveBargaining_List':</span><span class="w"> </span><span class="mf">16.9933</span><span class="p">,</span><span class="w">
+     </span><span class="err">'_</span><span class="mi">2</span><span class="err">_</span><span class="mi">4</span><span class="err">_</span><span class="mi">3</span><span class="err">_HumanRights_List':</span><span class="w"> </span><span class="mf">29.9267</span><span class="p">,</span><span class="w">
+     </span><span class="err">'_</span><span class="mi">2</span><span class="err">_</span><span class="mi">4</span><span class="err">_</span><span class="mi">4</span><span class="err">_NonDiscrimination_List':</span><span class="w"> </span><span class="mf">39.4199</span><span class="p">,</span><span class="w">
+     </span><span class="err">'_</span><span class="mi">2</span><span class="err">_</span><span class="mi">4</span><span class="err">_</span><span class="mi">5</span><span class="err">_RightsIndigenousPeoples_List':</span><span class="w"> </span><span class="mf">15.3267</span><span class="p">,</span><span class="w">
+     </span><span class="err">'_</span><span class="mi">3</span><span class="err">_</span><span class="mi">1</span><span class="err">_</span><span class="mi">1</span><span class="err">_BoardLeadership_List':</span><span class="w"> </span><span class="mf">39.8389</span><span class="p">,</span><span class="w">
+     </span><span class="err">'_</span><span class="mi">3</span><span class="err">_</span><span class="mi">1</span><span class="err">_</span><span class="mi">2</span><span class="err">_CeoExecutiveLeadership_List':</span><span class="w"> </span><span class="mf">40.2633</span><span class="p">,</span><span class="w">
+     </span><span class="err">'_</span><span class="mi">3</span><span class="err">_</span><span class="mi">1</span><span class="err">_</span><span class="mi">3</span><span class="err">_ManagementLeadership_List':</span><span class="w"> </span><span class="mf">40.1722</span><span class="p">,</span><span class="w">
+     </span><span class="err">'_</span><span class="mi">3</span><span class="err">_</span><span class="mi">1</span><span class="err">_</span><span class="mi">4</span><span class="err">_InternalControlRisks_List':</span><span class="w"> </span><span class="mf">37.0</span><span class="p">,</span><span class="w">
+     </span><span class="err">'_</span><span class="mi">3</span><span class="err">_</span><span class="mi">2</span><span class="err">_</span><span class="mi">1</span><span class="err">_EconomicPerformance_List':</span><span class="w"> </span><span class="mf">37.6667</span><span class="p">,</span><span class="w">
+     </span><span class="err">'_</span><span class="mi">3</span><span class="err">_</span><span class="mi">2</span><span class="err">_</span><span class="mi">2</span><span class="err">_IndustryInnovationInfrastructure_List':</span><span class="w"> </span><span class="mf">34.3333</span><span class="p">,</span><span class="w">
+     </span><span class="err">'_</span><span class="mi">3</span><span class="err">_</span><span class="mi">2</span><span class="err">_</span><span class="mi">3</span><span class="err">_MarketPresence_List':</span><span class="w"> </span><span class="mf">38.3333</span><span class="p">,</span><span class="w">
+     </span><span class="err">'_</span><span class="mi">3</span><span class="err">_</span><span class="mi">3</span><span class="err">_</span><span class="mi">1</span><span class="err">_IndirectEconomicImpacts_List':</span><span class="w"> </span><span class="mf">38.3333</span><span class="p">,</span><span class="w">
+     </span><span class="err">'_</span><span class="mi">3</span><span class="err">_</span><span class="mi">3</span><span class="err">_</span><span class="mi">2</span><span class="err">_Partnerships_List':</span><span class="w"> </span><span class="mf">9.0</span><span class="p">,</span><span class="w">
+     </span><span class="err">'_</span><span class="mi">3</span><span class="err">_</span><span class="mi">3</span><span class="err">_</span><span class="mi">3</span><span class="err">_PeaceJusticeInstitutions_List':</span><span class="w"> </span><span class="err">None</span><span class="p">,</span><span class="w">
+     </span><span class="err">'_</span><span class="mi">3</span><span class="err">_</span><span class="mi">3</span><span class="err">_</span><span class="mi">4</span><span class="err">_Transparency_List':</span><span class="w"> </span><span class="err">None</span><span class="p">,</span><span class="w">
+     </span><span class="err">'_</span><span class="mi">3</span><span class="err">_</span><span class="mi">4</span><span class="err">_</span><span class="mi">1</span><span class="err">_AntiCorruptionPolicies_List':</span><span class="w"> </span><span class="err">None</span><span class="p">,</span><span class="w">
+     </span><span class="err">'_</span><span class="mi">3</span><span class="err">_</span><span class="mi">4</span><span class="err">_</span><span class="mi">2</span><span class="err">_AntiCompetitiveBehavior_List':</span><span class="w"> </span><span class="err">None</span><span class="p">,</span><span class="w">
+     </span><span class="err">'_</span><span class="mi">3</span><span class="err">_</span><span class="mi">4</span><span class="err">_</span><span class="mi">3</span><span class="err">_BusinessEthicsTransparencyPayments_List':</span><span class="w"> </span><span class="err">None</span><span class="p">,</span><span class="w">
+     </span><span class="err">'_</span><span class="mi">3</span><span class="err">_</span><span class="mi">4</span><span class="err">_</span><span class="mi">4</span><span class="err">_RegulatoryCapturePoliticalInfluence_List':</span><span class="w"> </span><span class="mf">44.3051</span><span class="p">,</span><span class="w">
+     </span><span class="err">'company_idx':</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+     </span><span class="err">'criticalCountries_List':</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+     </span><span class="err">'noAccountingControv_List':</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+     </span><span class="err">'noAntiCompetition_List':</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+     </span><span class="err">'noBusinessEthics_List':</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+     </span><span class="err">'noChildLabor_List':</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+     </span><span class="err">'noEnvironmentControv_List':</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+     </span><span class="err">'noHumanRights_List':</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+     </span><span class="err">'noIPcontrov_List':</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+     </span><span class="err">'noInsiderTrading_List':</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+     </span><span class="err">'noMgmtCompensation_List':</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+     </span><span class="err">'noMgmtDepartures_List':</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+     </span><span class="err">'noPrivacyControv_List':</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+     </span><span class="err">'noResponsibleMarketing_List':</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+     </span><span class="err">'noTax_List':</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+     </span><span class="err">'noWorkingCondition_List':</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+     </span><span class="err">'nocustomerHealthSafety_List':</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+     </span><span class="err">'provider':</span><span class="w"> </span><span class="err">'Shacknews'</span><span class="p">,</span><span class="w">
+     </span><span class="err">'relevancy</span><span class="mi">10</span><span class="err">_List':</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w">
+     </span><span class="err">'relevancy</span><span class="mi">11</span><span class="err">_List':</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w">
+     </span><span class="err">'relevancy</span><span class="mi">12</span><span class="err">_List':</span><span class="w"> </span><span class="mf">0.08</span><span class="p">,</span><span class="w">
+     </span><span class="err">'relevancy</span><span class="mi">13</span><span class="err">_List':</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w">
+     </span><span class="err">'relevancy</span><span class="mi">14</span><span class="err">_List':</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w">
+     </span><span class="err">'relevancy</span><span class="mi">15</span><span class="err">_List':</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w">
+     </span><span class="err">'relevancy</span><span class="mi">16</span><span class="err">_List':</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w">
+     </span><span class="err">'relevancy</span><span class="mi">17</span><span class="err">_List':</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w">
+     </span><span class="err">'relevancy</span><span class="mi">18</span><span class="err">_List':</span><span class="w"> </span><span class="mf">0.12</span><span class="p">,</span><span class="w">
+     </span><span class="err">'relevancy</span><span class="mi">19</span><span class="err">_List':</span><span class="w"> </span><span class="mf">0.07</span><span class="p">,</span><span class="w">
+     </span><span class="err">'relevancy</span><span class="mi">1</span><span class="err">_List':</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w">
+     </span><span class="err">'relevancy</span><span class="mi">20</span><span class="err">_List':</span><span class="w"> </span><span class="mf">0.11</span><span class="p">,</span><span class="w">
+     </span><span class="err">'relevancy</span><span class="mi">21</span><span class="err">_List':</span><span class="w"> </span><span class="mf">0.12</span><span class="p">,</span><span class="w">
+     </span><span class="err">'relevancy</span><span class="mi">22</span><span class="err">_List':</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w">
+     </span><span class="err">'relevancy</span><span class="mi">23</span><span class="err">_List':</span><span class="w"> </span><span class="mf">0.11</span><span class="p">,</span><span class="w">
+     </span><span class="err">'relevancy</span><span class="mi">24</span><span class="err">_List':</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w">
+     </span><span class="err">'relevancy</span><span class="mi">25</span><span class="err">_List':</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w">
+     </span><span class="err">'relevancy</span><span class="mi">26</span><span class="err">_List':</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w">
+     </span><span class="err">'relevancy</span><span class="mi">27</span><span class="err">_List':</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w">
+     </span><span class="err">'relevancy</span><span class="mi">28</span><span class="err">_List':</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w">
+     </span><span class="err">'relevancy</span><span class="mi">29</span><span class="err">_List':</span><span class="w"> </span><span class="mf">0.08</span><span class="p">,</span><span class="w">
+     </span><span class="err">'relevancy</span><span class="mi">2</span><span class="err">_List':</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w">
+     </span><span class="err">'relevancy</span><span class="mi">30</span><span class="err">_List':</span><span class="w"> </span><span class="mf">0.11</span><span class="p">,</span><span class="w">
+     </span><span class="err">'relevancy</span><span class="mi">31</span><span class="err">_List':</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w">
+     </span><span class="err">'relevancy</span><span class="mi">32</span><span class="err">_List':</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w">
+     </span><span class="err">'relevancy</span><span class="mi">33</span><span class="err">_List':</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w">
+     </span><span class="err">'relevancy</span><span class="mi">34</span><span class="err">_List':</span><span class="w"> </span><span class="mf">0.12</span><span class="p">,</span><span class="w">
+     </span><span class="err">'relevancy</span><span class="mi">35</span><span class="err">_List':</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w">
+     </span><span class="err">'relevancy</span><span class="mi">36</span><span class="err">_List':</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w">
+     </span><span class="err">'relevancy</span><span class="mi">37</span><span class="err">_List':</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w">
+     </span><span class="err">'relevancy</span><span class="mi">38</span><span class="err">_List':</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w">
+     </span><span class="err">'relevancy</span><span class="mi">39</span><span class="err">_List':</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w">
+     </span><span class="err">'relevancy</span><span class="mi">3</span><span class="err">_List':</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w">
+     </span><span class="err">'relevancy</span><span class="mi">40</span><span class="err">_List':</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w">
+     </span><span class="err">'relevancy</span><span class="mi">41</span><span class="err">_List':</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w">
+     </span><span class="err">'relevancy</span><span class="mi">42</span><span class="err">_List':</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w">
+     </span><span class="err">'relevancy</span><span class="mi">43</span><span class="err">_List':</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w">
+     </span><span class="err">'relevancy</span><span class="mi">44</span><span class="err">_List':</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w">
+     </span><span class="err">'relevancy</span><span class="mi">45</span><span class="err">_List':</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w">
+     </span><span class="err">'relevancy</span><span class="mi">46</span><span class="err">_List':</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w">
+     </span><span class="err">'relevancy</span><span class="mi">47</span><span class="err">_List':</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w">
+     </span><span class="err">'relevancy</span><span class="mi">48</span><span class="err">_List':</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w">
+     </span><span class="err">'relevancy</span><span class="mi">49</span><span class="err">_List':</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w">
+     </span><span class="err">'relevancy</span><span class="mi">4</span><span class="err">_List':</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w">
+     </span><span class="err">'relevancy</span><span class="mi">50</span><span class="err">_List':</span><span class="w"> </span><span class="mf">0.08</span><span class="p">,</span><span class="w">
+     </span><span class="err">'relevancy</span><span class="mi">5</span><span class="err">_List':</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w">
+     </span><span class="err">'relevancy</span><span class="mi">6</span><span class="err">_List':</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w">
+     </span><span class="err">'relevancy</span><span class="mi">7</span><span class="err">_List':</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w">
+     </span><span class="err">'relevancy</span><span class="mi">8</span><span class="err">_List':</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w">
+     </span><span class="err">'relevancy</span><span class="mi">9</span><span class="err">_List':</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w">
+     </span><span class="err">'relevancy_List':</span><span class="w"> </span><span class="mf">75.0</span><span class="p">,</span><span class="w">
+     </span><span class="err">'summary':</span><span class="w"> </span><span class="err">'...</span><span class="w"> </span><span class="err">power</span><span class="w"> </span><span class="err">to</span><span class="w"> </span><span class="err">cancel</span><span class="w"> </span><span class="err">contracts</span><span class="w"> </span><span class="err">with</span><span class="w"> </span><span class="err">firms</span><span class="w"> </span><span class="err">found</span><span class="w"> </span><span class="err">to</span><span class="w"> </span><span class="err">be</span><span class="w"> </span><span class="err">organizing</span><span class="w"> </span><span class="err">training</span><span class="w"> </span><span class="err">\nrelated</span><span class="w"> </span><span class="err">to</span><span class="w"> </span><span class="err">racial</span><span class="w"> </span><span class="err">diversity</span><span class="p">,</span><span class="w"> </span><span class="err">sexual</span><span class="w"> </span><span class="err">identity</span><span class="p">,</span><span class="w"> </span><span class="err">or</span><span class="w"> </span><span class="err">gender</span><span class="w"> </span><span class="err">identity.</span><span class="w"> </span><span class="err">In</span><span class="w"> </span><span class="err">its</span><span class="w"> </span><span class="err">\nstatement</span><span class="p">,</span><span class="w"> </span><span class="err">Microsoft</span><span class="w"> </span><span class="err">said:.'</span><span class="p">,</span><span class="w">
+     </span><span class="err">'timestamp':</span><span class="w"> </span><span class="err">'</span><span class="mi">2020-10-07</span><span class="w"> </span><span class="mi">00</span><span class="err">:</span><span class="mi">00</span><span class="err">:</span><span class="mi">00</span><span class="err">'</span><span class="p">,</span><span class="w">
+     </span><span class="err">'title':</span><span class="w"> </span><span class="err">'Microsoft</span><span class="w"> </span><span class="err">responds</span><span class="w"> </span><span class="err">to</span><span class="w"> </span><span class="err">Labor</span><span class="w"> </span><span class="err">Department</span><span class="w"> </span><span class="err">probe</span><span class="w"> </span><span class="err">over</span><span class="w"> </span><span class="err">diversity</span><span class="w"> </span><span class="err">policy'</span><span class="p">,</span><span class="w">
+     </span><span class="err">'topics':</span><span class="w"> </span><span class="err">'</span><span class="mi">30</span><span class="p">,</span><span class="mi">18</span><span class="p">,</span><span class="mi">21</span><span class="p">,</span><span class="mi">34</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">23</span><span class="p">,</span><span class="mi">50</span><span class="p">,</span><span class="mi">12</span><span class="p">,</span><span class="mi">29</span><span class="p">,</span><span class="mi">19</span><span class="p">,</span><span class="mi">22</span><span class="p">,</span><span class="mi">36</span><span class="p">,</span><span class="mi">38</span><span class="p">,</span><span class="mi">33</span><span class="p">,</span><span class="mi">37</span><span class="p">,</span><span class="mi">32</span><span class="p">,</span><span class="mi">35</span><span class="p">,</span><span class="mi">39</span><span class="p">,</span><span class="mi">40</span><span class="p">,</span><span class="mi">41</span><span class="p">,</span><span class="mi">42</span><span class="p">,</span><span class="mi">43</span><span class="p">,</span><span class="err">'</span><span class="p">,</span><span class="w">
+     </span><span class="err">'url':</span><span class="w"> </span><span class="err">'https://www.shacknews.com/article/</span><span class="mi">120774</span><span class="err">/microsoft-responds-to-labor-department-probe-over-diversity-policy'</span><span class="p">,</span><span class="w">
+     </span><span class="err">'words':</span><span class="w"> </span><span class="err">'</span><span class="mi">490</span><span class="p">,</span><span class="mi">604</span><span class="p">,</span><span class="mi">79</span><span class="p">,</span><span class="mi">323</span><span class="p">,</span><span class="mi">75</span><span class="p">,</span><span class="mi">356</span><span class="p">,</span><span class="mi">383</span><span class="p">,</span><span class="mi">173</span><span class="p">,</span><span class="mi">338</span><span class="p">,</span><span class="mi">430</span><span class="p">,</span><span class="mi">331</span><span class="p">,</span><span class="mi">21</span><span class="p">,</span><span class="mi">170</span><span class="p">,</span><span class="mi">281</span><span class="p">,</span><span class="mi">582</span><span class="p">,</span><span class="mi">249</span><span class="p">,,</span><span class="err">'</span><span class="w">
+ </span><span class="p">},</span><span class="w">
+ </span><span class="p">[</span><span class="err">...</span><span class="p">]</span><span class="w">
+</span><span class="p">]</span><span class="w">
 </span></code></pre></div>
 <p>This endpoint retrieves a news for a specific company and for a specific Sensefolio topic.</p>
 
