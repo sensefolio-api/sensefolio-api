@@ -1729,7 +1729,7 @@ word | None | Yes | One of the Specific Words covered by Sensefolio
 import requests
 
 apiKey = 'Your_API_Key'
-company_idx = 1
+company_idx = 79
 start_date = "2015-01-01"
 end_date = "2020-12-01"
 
@@ -1777,18 +1777,19 @@ $.ajax(settings).done(function (response) {
 ```json
 [
  {
-     'category': 'Culture',
-     'company_idx': 1,
-     'company_symbol': 'MSFT',
+     'category': 'Management',
+     'company_idx': 79,
+     'cons': 'Lack of diversity and advancement',
      'currentPast': '(Current Employee)',
-     'dateDataGotRetrieved': '2020-09-26',
-     'dateRaw': 'September 9, 2020',
-     'description': 'Microsoft is no longer the Microsoft you thought it is. So much politics and management churn. No guidelines for layoffs but mangers constantly trying to kick people out.',
-     'locations': 'Bellevue, WA',
-     'positions': 'Software Development Engineer II',
-     'reviewID': '1ehqbkj42rd6i800',
-     'timestamp': '2020-09-09 00:00:00',
-     'titles': 'Microsoft is resuming stack-ranking'
+     'dateDataGotRetrieved': '2020-10-24',
+     'description': 'At gsk marietta, hourly employees are rarely promoted into management or salaried roles. If a promotion is achieved, it is usually in production for an off shift position. Consequently, there exist a culture of us versus them. No diversity in leadership roles in the production area.',
+     'locations': 'Marietta, PA',
+     'positions': 'Operator ',
+     'pros': 'Great folks, benefits and pay',
+     'ratings': 75.0,
+     'reviewID': '1ek5abv2ss7ds800',
+     'timestamp': '2020-10-08 00:00:00',
+     'titles': 'Little chance for advancement'
  }
 ]
 ```
