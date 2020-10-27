@@ -300,8 +300,8 @@ This endpoint retrieves all ESG Scores for a Specific Company.
 Parameter | Default | Optional? | Description
 --------- | ------- | ----------- | -----------
 company_idx | None | No | The IDX assigned by Sensefolio for a company
-start_date | None | Yes |Start Date using the "YYYY-MM-DD" format
-end_date | None | Yes |End Date using the "YYYY-MM-DD" format
+start_date | None | No |Start Date using the "YYYY-MM-DD" format
+end_date | None | No |End Date using the "YYYY-MM-DD" format
 
 <aside class="success">
 Remember — You can only access the Sensefolio API with your given API allowance.
@@ -361,8 +361,8 @@ This endpoint retrieves ESG Scores for a specific company.
 Parameter | Default | Optional? | Description
 --------- | ------- | ----------- | -----------
 company_idx | None | No | The IDX assigned by Sensefolio for a company
-start_date | None | Yes |Start Date using the "YYYY-MM-DD" format
-end_date | None | Yes |End Date using the "YYYY-MM-DD" format
+start_date | None | No |Start Date using the "YYYY-MM-DD" format
+end_date | None | No |End Date using the "YYYY-MM-DD" format
 
 
 
