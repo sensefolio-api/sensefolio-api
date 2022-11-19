@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="http://sensefolio.com/wp-content/uploads/2022/10/Sensefolio_Dark_Logo.jpg" alt="Sensefolio API Documentation" width="226">
+  <img src="http://sensefolio.com/wp-content/uploads/2022/10/Sensefolio_Dark_Logo_SQ.jpg" alt="Sensefolio API Documentation" width="226">
   <br>
 </p>
 
