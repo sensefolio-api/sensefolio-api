@@ -38,10 +38,12 @@ To request an API Key, please contact <contact@sensefolio.com> or visit <a href=
 ```python
 import requests
 
-apiKey = 'Your_API_Key'
+API_KEY = 'Your_API_Key'
 
-headers = {'x-api-key': apiKey,
-           'content-type': 'application/json'}
+headers = {
+	   'x-api-key': API_KEY,
+           'content-type': 'application/json'
+	}
 ```
 
 ```javascript
@@ -66,7 +68,7 @@ To request an API Key, please contact <contact@sensefolio.com> or visit <a href=
 
 Sensefolio expects for the API key to be included in all API requests to the server in a header that looks like the following:
 
-`apiKey: YOUR_API_KEY`
+`API_KEY: YOUR_API_KEY`
 
 **Security Warning:**
 It's important to secure your API Key against public access. The custom header option is strongly recommended over the querystring option for passing your API Key in a production environment.
@@ -91,23 +93,25 @@ Note: Making HTTP requests on the client side with Javascript is currently prohi
 ```python
 import requests
 
-apiKey = 'Your_API_Key'
+API_KEY = 'Your_API_Key'
 company_idx = 1
 start_date = "2015-01-01"
 end_date = "2020-12-01"
 
-headers = {'x-api-key': apiKey,
-           'content-type': 'application/json'}
+headers = {
+	   'x-api-key': API_KEY,
+           'content-type': 'application/json'
+	}
 
 companyInfoFull = requests.get(
-        "https://circular-hawk-253618.appspot.com/companyInfoFull/, 
+        "https://sensefolio-api.ue.r.appspot.com/companyInfoFull/, 
         headers=headers).json()
 ```
 
 
 ```javascript
 var settings = {
-  "url": "https://circular-hawk-253618.appspot.com/companyInfoFull/",
+  "url": "https://sensefolio-api.ue.r.appspot.com/companyInfoFull/",
   "method": "GET",
   "timeout": 0,
   "headers": {
@@ -176,7 +180,7 @@ This endpoint retrieves all details about companies covered by Sensefolio.
 
 ### HTTP Request
 
-`GET https://circular-hawk-253618.appspot.com/companyInfoFull`
+`GET https://sensefolio-api.ue.r.appspot.com/companyInfoFull`
 
 
 
@@ -188,16 +192,18 @@ This endpoint retrieves all details about companies covered by Sensefolio.
 ```python
 import requests
 
-apiKey = 'Your_API_Key'
+API_KEY = 'Your_API_Key'
 company_idx = 1
 start_date = "2015-01-01"
 end_date = "2020-12-01"
 
-headers = {'x-api-key': apiKey,
-           'content-type': 'application/json'}
+headers = {
+	   'x-api-key': API_KEY,
+           'content-type': 'application/json'
+	}
 
 companyScore = requests.get(
-        "https://circular-hawk-253618.appspot.com/companyScore?
+        "https://sensefolio-api.ue.r.appspot.com/companyScore?
         company_idx="+str(company_idx)+"&
         start_date=&
         end_date="
@@ -207,7 +213,7 @@ companyScore = requests.get(
 
 ```javascript
 var settings = {
-  "url": "https://circular-hawk-253618.appspot.com/companyScore?
+  "url": "https://sensefolio-api.ue.r.appspot.com/companyScore?
         company_idx="+str(company_idx)",
   "method": "GET",
   "timeout": 0,
@@ -293,7 +299,7 @@ This endpoint retrieves all ESG Scores for a Specific Company.
 
 ### HTTP Request
 
-`GET https://circular-hawk-253618.appspot.com/companyScore`
+`GET https://sensefolio-api.ue.r.appspot.com/companyScore`
 
 ### Query Parameters
 
@@ -312,16 +318,18 @@ Remember — You can only access the Sensefolio API with your given API allowanc
 ```python
 import requests
 
-apiKey = 'Your_API_Key'
+API_KEY = 'Your_API_Key'
 company_idx = 1
 start_date = "2015-01-01"
 end_date = "2020-12-01"
 
-headers = {'x-api-key': apiKey,
-           'content-type': 'application/json'}
+headers = {
+	   'x-api-key': API_KEY,
+           'content-type': 'application/json'
+	}
 
 companyScore = requests.get(
-        "https://circular-hawk-253618.appspot.com/companyScore?
+        "https://sensefolio-api.ue.r.appspot.com/companyScore?
         company_idx="+str(company_idx)+"&
         start_date="+str(start_date)+"&
         end_date="+str(end_date)
@@ -331,7 +339,7 @@ companyScore = requests.get(
 
 ```javascript
 var settings = {
-  "url": "https://circular-hawk-253618.appspot.com/companyScore?
+  "url": "https://sensefolio-api.ue.r.appspot.com/companyScore?
         company_idx="+str(company_idx)+"&
         start_date="+str(start_date)+"&
         end_date="+str(end_date)",
@@ -354,7 +362,7 @@ This endpoint retrieves ESG Scores for a specific company.
 
 ### HTTP Request
 
-`GET https://circular-hawk-253618.appspot.com/companyScore`
+`GET https://sensefolio-api.ue.r.appspot.com/companyScore`
 
 ### URL Parameters
 
@@ -374,14 +382,16 @@ end_date | None | No |End Date using the "YYYY-MM-DD" format
 ```python
 import requests
 
-apiKey = 'Your_API_Key'
+API_KEY = 'Your_API_Key'
 company_idx = 1
 
-headers = {'x-api-key': apiKey,
-           'content-type': 'application/json'}
+headers = {
+	   'x-api-key': API_KEY,
+           'content-type': 'application/json'
+	}
 
 companyLastScore = requests.get(
-        "https://circular-hawk-253618.appspot.com/companyLastScore?
+        "https://sensefolio-api.ue.r.appspot.com/companyLastScore?
         company_idx="+str(company_idx)
         , headers=headers).json()
 ```
@@ -389,7 +399,7 @@ companyLastScore = requests.get(
 
 ```javascript
 var settings = {
-  "url": "https://circular-hawk-253618.appspot.com/companyLastScore?
+  "url": "https://sensefolio-api.ue.r.appspot.com/companyLastScore?
         company_idx="+str(company_idx)",
   "method": "GET",
   "timeout": 0,
@@ -474,7 +484,7 @@ This endpoint retrieves the most recent ESG Scores for a specified Company.
 
 ### HTTP Request
 
-`GET https://circular-hawk-253618.appspot.com/companyLastScore`
+`GET https://sensefolio-api.ue.r.appspot.com/companyLastScore`
 
 ### Query Parameters
 
@@ -493,16 +503,18 @@ company_idx | none | It is necessary to include a "company_idx".
 ```python
 import requests
 
-apiKey = 'Your_API_Key'
+API_KEY = 'Your_API_Key'
 unique_peer_group_ID = 64
 start_date = "2015-01-01"
 end_date = "2020-12-01"
 
-headers = {'x-api-key': apiKey,
-           'content-type': 'application/json'}
+headers = {
+	   'x-api-key': API_KEY,
+           'content-type': 'application/json'
+	}
 
 peerGroupScore = requests.get(
-        "https://circular-hawk-253618.appspot.com/peerGroupScore?
+        "https://sensefolio-api.ue.r.appspot.com/peerGroupScore?
         unique_peer_group_ID="+str(unique_peer_group_ID)+"&
         start_date="+str(start_date)&
         end_date="+str(end_date)
@@ -512,7 +524,7 @@ peerGroupScore = requests.get(
 
 ```javascript
 var settings = {
-  "url": "https://circular-hawk-253618.appspot.com/peerGroupScore?
+  "url": "https://sensefolio-api.ue.r.appspot.com/peerGroupScore?
         unique_peer_group_ID="+str(unique_peer_group_ID)+"&
         start_date="+str(start_date)&
         end_date="+str(end_date),
@@ -600,7 +612,7 @@ This endpoint retrieves all ESG Scores for a Specific Peer Group (ie. Region/Ind
 
 ### HTTP Request
 
-`GET https://circular-hawk-253618.appspot.com/peerGroupScore`
+`GET https://sensefolio-api.ue.r.appspot.com/peerGroupScore`
 
 ### Query Parameters
 
@@ -622,16 +634,18 @@ end_date | None | Yes |End Date using the "YYYY-MM-DD" format
 ```python
 import requests
 
-apiKey = 'Your_API_Key'
+API_KEY = 'Your_API_Key'
 company_idx = 1
 start_date = "2015-01-01"
 end_date = "2020-12-01"
 
-headers = {'x-api-key': apiKey,
-           'content-type': 'application/json'}
+headers = {
+	   'x-api-key': API_KEY,
+           'content-type': 'application/json'
+	}
 
 ActualNews = requests.get(
-        "https://circular-hawk-253618.appspot.com/ActualNews3?
+        "https://sensefolio-api.ue.r.appspot.com/ActualNews3?
         company_idx="+str(company_idx)+"&
         start_date="+str(start_date)"+&
         end_date="+str(end_date)"+&
@@ -646,7 +660,7 @@ ActualNews = requests.get(
 
 ```javascript
 var settings = {
-  "url": "https://circular-hawk-253618.appspot.com/ActualNews3?
+  "url": "https://sensefolio-api.ue.r.appspot.com/ActualNews3?
         company_idx="+str(company_idx)+"&
         start_date="+str(start_date)"+&
         end_date="+str(end_date)"+&
@@ -806,7 +820,7 @@ This endpoint retrieves all news for a specified Company.
 
 ### HTTP Request
 
-`GET https://circular-hawk-253618.appspot.com/ActualNews3`
+`GET https://sensefolio-api.ue.r.appspot.com/ActualNews3`
 
 ### Query Parameters
 
@@ -910,17 +924,19 @@ Remember — You can only access the Sensefolio API with your given API allowanc
 ```python
 import requests
 
-apiKey = 'Your_API_Key'
+API_KEY = 'Your_API_Key'
 company_idx = 1
 start_date = "2015-01-01"
 end_date = "2020-12-01"
 topic = "business_ethics_transparency"
 
-headers = {'x-api-key': apiKey,
-           'content-type': 'application/json'}
+headers = {
+	   'x-api-key': API_KEY,
+           'content-type': 'application/json'
+	}
 
 ActualNews = requests.get(
-        "https://circular-hawk-253618.appspot.com/ActualNews3?
+        "https://sensefolio-api.ue.r.appspot.com/ActualNews3?
         company_idx="+str(company_idx)+"&
         start_date="+str(start_date)+"&
         end_date="+str(end_date)+"&
@@ -935,7 +951,7 @@ ActualNews = requests.get(
 
 ```javascript
 var settings = {
-  "url": "https://circular-hawk-253618.appspot.com/ActualNews3?
+  "url": "https://sensefolio-api.ue.r.appspot.com/ActualNews3?
         company_idx="+str(company_idx)+"&
         start_date="+str(start_date)"+&
         end_date="+str(end_date)"+&
@@ -1096,7 +1112,7 @@ This endpoint retrieves news for a specific company and for a specific Sensefoli
 
 ### HTTP Request
 
-`GET https://circular-hawk-253618.appspot.com/ActualNews3`
+`GET https://sensefolio-api.ue.r.appspot.com/ActualNews3`
 
 ### URL Parameters
 
@@ -1197,16 +1213,18 @@ Remember — You can only access the Sensefolio API with your given API allowanc
 ```python
 import requests
 
-apiKey = 'Your_API_Key'
+API_KEY = 'Your_API_Key'
 company_idx = 1
 start_date = "2015-01-01"
 end_date = "2020-12-01"
 
-headers = {'x-api-key': apiKey,
-           'content-type': 'application/json'}
+headers = {
+	   'x-api-key': API_KEY,
+           'content-type': 'application/json'
+	}
 
 ActualTweets = requests.get(
-        "https://circular-hawk-253618.appspot.com/ActualTweets?
+        "https://sensefolio-api.ue.r.appspot.com/ActualTweets?
         company_idx="+str(company_idx)+"&
         start_date="+str(start_date)+"&
         end_date="+str(end_date)+"&
@@ -1221,7 +1239,7 @@ ActualTweets = requests.get(
 
 ```javascript
 var settings = {
-  "url": "https://circular-hawk-253618.appspot.com/ActualNews3?
+  "url": "https://sensefolio-api.ue.r.appspot.com/ActualNews3?
         company_idx="+str(company_idx)+"&
         start_date="+str(start_date)"+&
         end_date="+str(end_date)"+&
@@ -1331,7 +1349,7 @@ This endpoint retrieves all tweets.
 
 ### HTTP Request
 
-`GET https://circular-hawk-253618.appspot.com/ActualTweets`
+`GET https://sensefolio-api.ue.r.appspot.com/ActualTweets`
 
 ### Query Parameters
 
@@ -1355,17 +1373,19 @@ Remember — You can only access the Sensefolio API with your given API allowanc
 ```python
 import requests
 
-apiKey = 'Your_API_Key'
+API_KEY = 'Your_API_Key'
 company_idx = 1
 start_date = "2015-01-01"
 end_date = "2020-12-01"
 topic = "business_ethics_transparency"
 
-headers = {'x-api-key': apiKey,
-           'content-type': 'application/json'}
+headers = {
+	   'x-api-key': API_KEY,
+           'content-type': 'application/json'
+	}
 
 ActualTweets = requests.get(
-        "https://circular-hawk-253618.appspot.com/ActualTweets?
+        "https://sensefolio-api.ue.r.appspot.com/ActualTweets?
         company_idx="+str(company_idx)+"&
         start_date="+str(start_date)+"&
         end_date="+str(end_date)+"&
@@ -1379,7 +1399,7 @@ ActualTweets = requests.get(
 
 ```javascript
 var settings = {
-  "url": "https://circular-hawk-253618.appspot.com/ActualTweets?
+  "url": "https://sensefolio-api.ue.r.appspot.com/ActualTweets?
         company_idx="+str(company_idx)+"&
         start_date="+str(start_date)"+&
         end_date="+str(end_date)"+&
@@ -1491,7 +1511,7 @@ This endpoint retrieves tweets for a specific company and for a specific Sensefo
 
 ### HTTP Request
 
-`GET https://circular-hawk-253618.appspot.com/ActualTweets`
+`GET https://sensefolio-api.ue.r.appspot.com/ActualTweets`
 
 ### URL Parameters
 
@@ -1518,16 +1538,18 @@ controv | None | Yes | One of the Specific Controversies covered by Sensefolio
 ```python
 import requests
 
-apiKey = 'Your_API_Key'
+API_KEY = 'Your_API_Key'
 company_idx = 1
 start_date = "2015-01-01"
 end_date = "2020-12-01"
 
-headers = {'x-api-key': apiKey,
-           'content-type': 'application/json'}
+headers = {
+	   'x-api-key': API_KEY,
+           'content-type': 'application/json'
+	}
 
 ActualGlassdoor = requests.get(
-        "https://circular-hawk-253618.appspot.com/ActualGlassdoor?
+        "https://sensefolio-api.ue.r.appspot.com/ActualGlassdoor?
         company_idx="+str(company_idx)+"&
         start_date="+str(start_date)+"&
         end_date="+str(end_date)+"&
@@ -1541,7 +1563,7 @@ ActualGlassdoor = requests.get(
 
 ```javascript
 var settings = {
-  "url": "https://circular-hawk-253618.appspot.com/ActualGlassdoor?
+  "url": "https://sensefolio-api.ue.r.appspot.com/ActualGlassdoor?
         company_idx="+str(company_idx)+"&
         start_date="+str(start_date)+"&
         end_date="+str(end_date)+"&
@@ -1598,7 +1620,7 @@ This endpoint retrieves all G Company Reviews.
 
 ### HTTP Request
 
-`GET https://circular-hawk-253618.appspot.com/ActualGlassdoor`
+`GET https://sensefolio-api.ue.r.appspot.com/ActualGlassdoor`
 
 ### Query Parameters
 
@@ -1621,17 +1643,19 @@ Remember — You can only access the Sensefolio API with your given API allowanc
 ```python
 import requests
 
-apiKey = 'Your_API_Key'
+API_KEY = 'Your_API_Key'
 company_idx = 1
 start_date = "2015-01-01"
 end_date = "2020-12-01"
 topic = "business_ethics_transparency"
 
-headers = {'x-api-key': apiKey,
-           'content-type': 'application/json'}
+headers = {
+	   'x-api-key': API_KEY,
+           'content-type': 'application/json'
+	}
 
 ActualGlassdoor = requests.get(
-        "https://circular-hawk-253618.appspot.com/ActualGlassdoor?
+        "https://sensefolio-api.ue.r.appspot.com/ActualGlassdoor?
         company_idx="+str(company_idx)+"&
         start_date="+str(start_date)+"&
         end_date="+str(end_date)+"&
@@ -1645,7 +1669,7 @@ ActualGlassdoor = requests.get(
 
 ```javascript
 var settings = {
-  "url": "https://circular-hawk-253618.appspot.com/ActualGlassdoor?
+  "url": "https://sensefolio-api.ue.r.appspot.com/ActualGlassdoor?
         company_idx="+str(company_idx)+"&
         start_date="+str(start_date)+"&
         end_date="+str(end_date)+"&
@@ -1703,7 +1727,7 @@ This endpoint retrieves all G Company Reviews for a specific company and for a s
 
 ### HTTP Request
 
-`GET https://circular-hawk-253618.appspot.com/ActualGlassdoor`
+`GET https://sensefolio-api.ue.r.appspot.com/ActualGlassdoor`
 
 ### URL Parameters
 
@@ -1728,16 +1752,18 @@ word | None | Yes | One of the Specific Words covered by Sensefolio
 ```python
 import requests
 
-apiKey = 'Your_API_Key'
+API_KEY = 'Your_API_Key'
 company_idx = 79
 start_date = "2015-01-01"
 end_date = "2020-12-01"
 
-headers = {'x-api-key': apiKey,
-           'content-type': 'application/json'}
+headers = {
+	   'x-api-key': API_KEY,
+           'content-type': 'application/json'
+	}
 
 ActualIndeed = requests.get(
-        "https://circular-hawk-253618.appspot.com/ActualIndeed?
+        "https://sensefolio-api.ue.r.appspot.com/ActualIndeed?
         company_idx="+str(company_idx)+"&
         start_date="+str(start_date)+"&
         end_date="+str(end_date)+"&
@@ -1751,7 +1777,7 @@ ActualIndeed = requests.get(
 
 ```javascript
 var settings = {
-  "url": "https://circular-hawk-253618.appspot.com/ActualIndeed?
+  "url": "https://sensefolio-api.ue.r.appspot.com/ActualIndeed?
         company_idx="+str(company_idx)+"&
         start_date="+str(start_date)+"&
         end_date="+str(end_date)+"&
@@ -1798,7 +1824,7 @@ This endpoint retrieves all I Company Reviews.
 
 ### HTTP Request
 
-`GET https://circular-hawk-253618.appspot.com/ActualIndeed`
+`GET https://sensefolio-api.ue.r.appspot.com/ActualIndeed`
 
 ### Query Parameters
 
@@ -1820,17 +1846,19 @@ Remember — You can only access the Sensefolio API with your given API allowanc
 ```python
 import requests
 
-apiKey = 'Your_API_Key'
+API_KEY = 'Your_API_Key'
 company_idx = 1
 start_date = "2015-01-01"
 end_date = "2020-12-01"
 topic = "business_ethics_transparency"
 
-headers = {'x-api-key': apiKey,
-           'content-type': 'application/json'}
+headers = {
+	   'x-api-key': API_KEY,
+           'content-type': 'application/json'
+	}
 
 ActualIndeed = requests.get(
-        "https://circular-hawk-253618.appspot.com/ActualIndeed?
+        "https://sensefolio-api.ue.r.appspot.com/ActualIndeed?
         company_idx="+str(company_idx)+"&
         start_date="+str(start_date)+"&
         end_date="+str(end_date)+"&
@@ -1844,7 +1872,7 @@ ActualIndeed = requests.get(
 
 ```javascript
 var settings = {
-  "url": "https://circular-hawk-253618.appspot.com/ActualIndeed?
+  "url": "https://sensefolio-api.ue.r.appspot.com/ActualIndeed?
         company_idx="+str(company_idx)+"&
         start_date="+str(start_date)+"&
         end_date="+str(end_date)+"&
@@ -1891,7 +1919,7 @@ This endpoint retrieves all I Company Reviews for a specific company and for a s
 
 ### HTTP Request
 
-`GET https://circular-hawk-253618.appspot.com/ActualIndeed`
+`GET https://sensefolio-api.ue.r.appspot.com/ActualIndeed`
 
 ### URL Parameters
 
@@ -1917,16 +1945,18 @@ criteria | None | Yes | One of the Criteria covered by Sensefolio
 ```python
 import requests
 
-apiKey = 'Your_API_Key'
+API_KEY = 'Your_API_Key'
 company_idx = 1
 start_date = "2015-01-01"
 end_date = "2020-12-01"
 
-headers = {'x-api-key': apiKey,
-           'content-type': 'application/json'}
+headers = {
+	   'x-api-key': API_KEY,
+           'content-type': 'application/json'
+	}
 
 ActualCDP = requests.get(
-        "https://circular-hawk-253618.appspot.com/ActualCDP?
+        "https://sensefolio-api.ue.r.appspot.com/ActualCDP?
         company_idx="+str(company_idx)+"&
         start_date="+str(start_date)+"&
         end_date="+str(end_date)
@@ -1936,7 +1966,7 @@ ActualCDP = requests.get(
 
 ```javascript
 var settings = {
-  "url": "https://circular-hawk-253618.appspot.com/ActualCDP?
+  "url": "https://sensefolio-api.ue.r.appspot.com/ActualCDP?
         company_idx="+str(company_idx)+"&
         start_date="+str(start_date)+"&
         end_date="+str(end_date),
@@ -1995,7 +2025,7 @@ This endpoint retrieves all Carbon Disclosure for a specific company and optiona
 
 ### HTTP Request
 
-`GET https://circular-hawk-253618.appspot.com/ActualCDP`
+`GET https://sensefolio-api.ue.r.appspot.com/ActualCDP`
 
 ### Query Parameters
 
@@ -2022,16 +2052,18 @@ Remember — You can only access the Sensefolio API with your given API allowanc
 ```python
 import requests
 
-apiKey = 'Your_API_Key'
+API_KEY = 'Your_API_Key'
 company_idx = 1
 start_date = "2015-01-01"
 end_date = "2020-12-01"
 
-headers = {'x-api-key': apiKey,
-           'content-type': 'application/json'}
+headers = {
+	   'x-api-key': API_KEY,
+           'content-type': 'application/json'
+	}
 
 ActualViolationTracker = requests.get(
-        "https://circular-hawk-253618.appspot.com/ActualViolationTracker?
+        "https://sensefolio-api.ue.r.appspot.com/ActualViolationTracker?
         company_idx="+str(company_idx)+"&
         start_date="+str(start_date)+"&
         end_date="+str(end_date)
@@ -2040,7 +2072,7 @@ ActualViolationTracker = requests.get(
 
 ```javascript
 var settings = {
-  "url": "https://circular-hawk-253618.appspot.com/ActualViolationTracker?
+  "url": "https://sensefolio-api.ue.r.appspot.com/ActualViolationTracker?
         company_idx="+str(company_idx)+"&
         start_date="+str(start_date)+"&
         end_date="+str(end_date),
@@ -2093,7 +2125,7 @@ This endpoint retrieves all Violations for a specific company and optionally in 
 
 ### HTTP Request
 
-`GET https://circular-hawk-253618.appspot.com/ActualViolationTracker`
+`GET https://sensefolio-api.ue.r.appspot.com/ActualViolationTracker`
 
 ### Query Parameters
 
