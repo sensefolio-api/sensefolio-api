@@ -1,10 +1,9 @@
 <p align="center">
-  <img src="http://sensefolio.com/wp-content/uploads/2022/10/Sensefolio_Dark_Logo.png" alt="Sensefolio API Documentation" width="226">
+  <img src="http://sensefolio.com/wp-content/uploads/2022/10/Sensefolio_Dark_Logo.jpg" alt="Sensefolio API Documentation" width="226">
   <br>
-  <a href="https://github.com/slatedocs/slate/actions?query=workflow%3ABuild+branch%3Amain"><img src="https://github.com/slatedocs/slate/workflows/Build/badge.svg?branch=main" alt="Build Status"></a>
 </p>
 
-<p align="center">Sensefolio API documentation.</p>
+<p align="center">Sensefolio API documentation</p>
 
 Questions? Need Help? Found a bug?
 --------------------
