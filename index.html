@@ -449,12 +449,10 @@ Any questions on the Sensefolio ESG Data? Please contact us: <a href="mailto:con
 </blockquote>
 <div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">requests</span>
 
-<span class="n">API_KEY</span> <span class="o">=</span> <span class="s">'Your_API_Key'</span>
+<span class="n">apiKey</span> <span class="o">=</span> <span class="s">'Your_API_Key'</span>
 
-<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span>
-       <span class="s">'x-api-key'</span><span class="p">:</span> <span class="n">API_KEY</span><span class="p">,</span>
-           <span class="s">'content-type'</span><span class="p">:</span> <span class="s">'application/json'</span>
-    <span class="p">}</span>
+<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s">'x-api-key'</span><span class="p">:</span> <span class="n">apiKey</span><span class="p">,</span>
+           <span class="s">'content-type'</span><span class="p">:</span> <span class="s">'application/json'</span><span class="p">}</span>
 </code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">var</span> <span class="nx">settings</span> <span class="o">=</span> <span class="p">{</span>
   <span class="dl">"</span><span class="s2">method</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">GET</span><span class="dl">"</span><span class="p">,</span>
   <span class="dl">"</span><span class="s2">timeout</span><span class="dl">"</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
@@ -477,7 +475,7 @@ To request an API Key, please contact <a href="mailto:contact@sensefolio.com">co
 
 <p>Sensefolio expects for the API key to be included in all API requests to the server in a header that looks like the following:</p>
 
-<p><code>API_KEY: YOUR_API_KEY</code></p>
+<p><code>apiKey: YOUR_API_KEY</code></p>
 
 <p><strong>Security Warning:</strong>
 It&#39;s important to secure your API Key against public access. The custom header option is strongly recommended over the querystring option for passing your API Key in a production environment.</p>
@@ -494,21 +492,19 @@ Note: Making HTTP requests on the client side with Javascript is currently prohi
 </aside>
 <h1 id='get-full-list-of-companies'>Get Full List of Companies</h1><h2 id='get-all-companies-covered-by-sensefolio-whether-they-public-or-private'>Get All Companies covered by Sensefolio (whether they Public or Private)</h2><div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">requests</span>
 
-<span class="n">API_KEY</span> <span class="o">=</span> <span class="s">'Your_API_Key'</span>
+<span class="n">apiKey</span> <span class="o">=</span> <span class="s">'Your_API_Key'</span>
 <span class="n">company_idx</span> <span class="o">=</span> <span class="mi">1</span>
 <span class="n">start_date</span> <span class="o">=</span> <span class="s">"2015-01-01"</span>
 <span class="n">end_date</span> <span class="o">=</span> <span class="s">"2020-12-01"</span>
 
-<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span>
-       <span class="s">'x-api-key'</span><span class="p">:</span> <span class="n">API_KEY</span><span class="p">,</span>
-           <span class="s">'content-type'</span><span class="p">:</span> <span class="s">'application/json'</span>
-    <span class="p">}</span>
+<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s">'x-api-key'</span><span class="p">:</span> <span class="n">apiKey</span><span class="p">,</span>
+           <span class="s">'content-type'</span><span class="p">:</span> <span class="s">'application/json'</span><span class="p">}</span>
 
 <span class="n">companyInfoFull</span> <span class="o">=</span> <span class="n">requests</span><span class="p">.</span><span class="n">get</span><span class="p">(</span>
-        <span class="s">"https://sensefolio-api.ue.r.appspot.com/companyInfoFull/, 
+        <span class="s">"https://circular-hawk-253618.appspot.com/companyInfoFull/, 
         headers=headers).json()
 </span></code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">var</span> <span class="nx">settings</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="dl">"</span><span class="s2">url</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">https://sensefolio-api.ue.r.appspot.com/companyInfoFull/</span><span class="dl">"</span><span class="p">,</span>
+  <span class="dl">"</span><span class="s2">url</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">https://circular-hawk-253618.appspot.com/companyInfoFull/</span><span class="dl">"</span><span class="p">,</span>
   <span class="dl">"</span><span class="s2">method</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">GET</span><span class="dl">"</span><span class="p">,</span>
   <span class="dl">"</span><span class="s2">timeout</span><span class="dl">"</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
   <span class="dl">"</span><span class="s2">headers</span><span class="dl">"</span><span class="p">:</span> <span class="p">{</span>
@@ -573,27 +569,25 @@ Note: Making HTTP requests on the client side with Javascript is currently prohi
 </span></code></pre></div>
 <p>This endpoint retrieves all details about companies covered by Sensefolio.</p>
 <h3 id='http-request'>HTTP Request</h3>
-<p><code>GET https://sensefolio-api.ue.r.appspot.com/companyInfoFull</code></p>
+<p><code>GET https://circular-hawk-253618.appspot.com/companyInfoFull</code></p>
 <h1 id='company-esg-score'>Company ESG Score</h1><h2 id='get-all-esg-scores-for-a-specific-company'>Get All ESG Scores for a Specific Company</h2><div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">requests</span>
 
-<span class="n">API_KEY</span> <span class="o">=</span> <span class="s">'Your_API_Key'</span>
+<span class="n">apiKey</span> <span class="o">=</span> <span class="s">'Your_API_Key'</span>
 <span class="n">company_idx</span> <span class="o">=</span> <span class="mi">1</span>
 <span class="n">start_date</span> <span class="o">=</span> <span class="s">"2015-01-01"</span>
 <span class="n">end_date</span> <span class="o">=</span> <span class="s">"2020-12-01"</span>
 
-<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span>
-       <span class="s">'x-api-key'</span><span class="p">:</span> <span class="n">API_KEY</span><span class="p">,</span>
-           <span class="s">'content-type'</span><span class="p">:</span> <span class="s">'application/json'</span>
-    <span class="p">}</span>
+<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s">'x-api-key'</span><span class="p">:</span> <span class="n">apiKey</span><span class="p">,</span>
+           <span class="s">'content-type'</span><span class="p">:</span> <span class="s">'application/json'</span><span class="p">}</span>
 
 <span class="n">companyScore</span> <span class="o">=</span> <span class="n">requests</span><span class="p">.</span><span class="n">get</span><span class="p">(</span>
-        <span class="s">"https://sensefolio-api.ue.r.appspot.com/companyScore?
+        <span class="s">"https://circular-hawk-253618.appspot.com/companyScore?
         company_idx="</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">company_idx</span><span class="p">)</span><span class="o">+</span><span class="s">"&amp;
         start_date=&amp;
         end_date="</span>
         <span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">).</span><span class="n">json</span><span class="p">()</span>
 </code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">var</span> <span class="nx">settings</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="dl">"</span><span class="s2">url</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">https://sensefolio-api.ue.r.appspot.com/companyScore?
+  <span class="dl">"</span><span class="s2">url</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">https://circular-hawk-253618.appspot.com/companyScore?
         company_idx=</span><span class="dl">"</span><span class="o">+</span><span class="nx">str</span><span class="p">(</span><span class="nx">company_idx</span><span class="p">)</span><span class="dl">"</span><span class="s2">,
   </span><span class="dl">"</span><span class="nx">method</span><span class="dl">"</span><span class="s2">: </span><span class="dl">"</span><span class="nx">GET</span><span class="dl">"</span><span class="s2">,
   </span><span class="dl">"</span><span class="nx">timeout</span><span class="dl">"</span><span class="s2">: 0,
@@ -675,7 +669,7 @@ $.ajax(settings).done(function (response) {
 </span></code></pre></div>
 <p>This endpoint retrieves all ESG Scores for a Specific Company.</p>
 <h3 id='http-request-2'>HTTP Request</h3>
-<p><code>GET https://sensefolio-api.ue.r.appspot.com/companyScore</code></p>
+<p><code>GET https://circular-hawk-253618.appspot.com/companyScore</code></p>
 <h3 id='query-parameters'>Query Parameters</h3>
 <table><thead>
 <tr>
@@ -710,24 +704,22 @@ Remember — You can only access the Sensefolio API with your given API allowanc
 </aside>
 <h2 id='get-all-esg-scores-for-a-specific-company-for-a-specific-period'>Get All ESG Scores for a Specific Company for a Specific Period</h2><div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">requests</span>
 
-<span class="n">API_KEY</span> <span class="o">=</span> <span class="s">'Your_API_Key'</span>
+<span class="n">apiKey</span> <span class="o">=</span> <span class="s">'Your_API_Key'</span>
 <span class="n">company_idx</span> <span class="o">=</span> <span class="mi">1</span>
 <span class="n">start_date</span> <span class="o">=</span> <span class="s">"2015-01-01"</span>
 <span class="n">end_date</span> <span class="o">=</span> <span class="s">"2020-12-01"</span>
 
-<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span>
-       <span class="s">'x-api-key'</span><span class="p">:</span> <span class="n">API_KEY</span><span class="p">,</span>
-           <span class="s">'content-type'</span><span class="p">:</span> <span class="s">'application/json'</span>
-    <span class="p">}</span>
+<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s">'x-api-key'</span><span class="p">:</span> <span class="n">apiKey</span><span class="p">,</span>
+           <span class="s">'content-type'</span><span class="p">:</span> <span class="s">'application/json'</span><span class="p">}</span>
 
 <span class="n">companyScore</span> <span class="o">=</span> <span class="n">requests</span><span class="p">.</span><span class="n">get</span><span class="p">(</span>
-        <span class="s">"https://sensefolio-api.ue.r.appspot.com/companyScore?
+        <span class="s">"https://circular-hawk-253618.appspot.com/companyScore?
         company_idx="</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">company_idx</span><span class="p">)</span><span class="o">+</span><span class="s">"&amp;
         start_date="</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">start_date</span><span class="p">)</span><span class="o">+</span><span class="s">"&amp;
         end_date="</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">end_date</span><span class="p">)</span>
         <span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">).</span><span class="n">json</span><span class="p">()</span>
 </code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">var</span> <span class="nx">settings</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="dl">"</span><span class="s2">url</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">https://sensefolio-api.ue.r.appspot.com/companyScore?
+  <span class="dl">"</span><span class="s2">url</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">https://circular-hawk-253618.appspot.com/companyScore?
         company_idx=</span><span class="dl">"</span><span class="o">+</span><span class="nx">str</span><span class="p">(</span><span class="nx">company_idx</span><span class="p">)</span><span class="o">+</span><span class="dl">"</span><span class="s2">&amp;
         start_date=</span><span class="dl">"</span><span class="o">+</span><span class="nx">str</span><span class="p">(</span><span class="nx">start_date</span><span class="p">)</span><span class="o">+</span><span class="dl">"</span><span class="s2">&amp;
         end_date=</span><span class="dl">"</span><span class="o">+</span><span class="nx">str</span><span class="p">(</span><span class="nx">end_date</span><span class="p">)</span><span class="dl">"</span><span class="s2">,
@@ -745,7 +737,7 @@ $.ajax(settings).done(function (response) {
 </span></code></pre></div>
 <p>This endpoint retrieves ESG Scores for a specific company.</p>
 <h3 id='http-request-3'>HTTP Request</h3>
-<p><code>GET https://sensefolio-api.ue.r.appspot.com/companyScore</code></p>
+<p><code>GET https://circular-hawk-253618.appspot.com/companyScore</code></p>
 <h3 id='url-parameters'>URL Parameters</h3>
 <table><thead>
 <tr>
@@ -776,20 +768,18 @@ $.ajax(settings).done(function (response) {
 </tbody></table>
 <h1 id='get-most-recent-company-esg-score'>Get Most Recent Company ESG Score</h1><h2 id='get-most-recent-company-esg-score-2'>Get Most Recent Company ESG Score</h2><div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">requests</span>
 
-<span class="n">API_KEY</span> <span class="o">=</span> <span class="s">'Your_API_Key'</span>
+<span class="n">apiKey</span> <span class="o">=</span> <span class="s">'Your_API_Key'</span>
 <span class="n">company_idx</span> <span class="o">=</span> <span class="mi">1</span>
 
-<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span>
-       <span class="s">'x-api-key'</span><span class="p">:</span> <span class="n">API_KEY</span><span class="p">,</span>
-           <span class="s">'content-type'</span><span class="p">:</span> <span class="s">'application/json'</span>
-    <span class="p">}</span>
+<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s">'x-api-key'</span><span class="p">:</span> <span class="n">apiKey</span><span class="p">,</span>
+           <span class="s">'content-type'</span><span class="p">:</span> <span class="s">'application/json'</span><span class="p">}</span>
 
 <span class="n">companyLastScore</span> <span class="o">=</span> <span class="n">requests</span><span class="p">.</span><span class="n">get</span><span class="p">(</span>
-        <span class="s">"https://sensefolio-api.ue.r.appspot.com/companyLastScore?
+        <span class="s">"https://circular-hawk-253618.appspot.com/companyLastScore?
         company_idx="</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">company_idx</span><span class="p">)</span>
         <span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">).</span><span class="n">json</span><span class="p">()</span>
 </code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">var</span> <span class="nx">settings</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="dl">"</span><span class="s2">url</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">https://sensefolio-api.ue.r.appspot.com/companyLastScore?
+  <span class="dl">"</span><span class="s2">url</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">https://circular-hawk-253618.appspot.com/companyLastScore?
         company_idx=</span><span class="dl">"</span><span class="o">+</span><span class="nx">str</span><span class="p">(</span><span class="nx">company_idx</span><span class="p">)</span><span class="dl">"</span><span class="s2">,
   </span><span class="dl">"</span><span class="nx">method</span><span class="dl">"</span><span class="s2">: </span><span class="dl">"</span><span class="nx">GET</span><span class="dl">"</span><span class="s2">,
   </span><span class="dl">"</span><span class="nx">timeout</span><span class="dl">"</span><span class="s2">: 0,
@@ -870,7 +860,7 @@ $.ajax(settings).done(function (response) {
 </span></code></pre></div>
 <p>This endpoint retrieves the most recent ESG Scores for a specified Company.</p>
 <h3 id='http-request-4'>HTTP Request</h3>
-<p><code>GET https://sensefolio-api.ue.r.appspot.com/companyLastScore</code></p>
+<p><code>GET https://circular-hawk-253618.appspot.com/companyLastScore</code></p>
 <h3 id='query-parameters-2'>Query Parameters</h3>
 <table><thead>
 <tr>
@@ -887,24 +877,22 @@ $.ajax(settings).done(function (response) {
 </tbody></table>
 <h1 id='get-scores-for-a-specific-peer-group'>Get Scores for a Specific Peer Group</h1><h2 id='get-scores-for-a-specific-peer-group-2'>Get Scores for a Specific Peer Group</h2><div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">requests</span>
 
-<span class="n">API_KEY</span> <span class="o">=</span> <span class="s">'Your_API_Key'</span>
+<span class="n">apiKey</span> <span class="o">=</span> <span class="s">'Your_API_Key'</span>
 <span class="n">unique_peer_group_ID</span> <span class="o">=</span> <span class="mi">64</span>
 <span class="n">start_date</span> <span class="o">=</span> <span class="s">"2015-01-01"</span>
 <span class="n">end_date</span> <span class="o">=</span> <span class="s">"2020-12-01"</span>
 
-<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span>
-       <span class="s">'x-api-key'</span><span class="p">:</span> <span class="n">API_KEY</span><span class="p">,</span>
-           <span class="s">'content-type'</span><span class="p">:</span> <span class="s">'application/json'</span>
-    <span class="p">}</span>
+<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s">'x-api-key'</span><span class="p">:</span> <span class="n">apiKey</span><span class="p">,</span>
+           <span class="s">'content-type'</span><span class="p">:</span> <span class="s">'application/json'</span><span class="p">}</span>
 
 <span class="n">peerGroupScore</span> <span class="o">=</span> <span class="n">requests</span><span class="p">.</span><span class="n">get</span><span class="p">(</span>
-        <span class="s">"https://sensefolio-api.ue.r.appspot.com/peerGroupScore?
+        <span class="s">"https://circular-hawk-253618.appspot.com/peerGroupScore?
         unique_peer_group_ID="</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">unique_peer_group_ID</span><span class="p">)</span><span class="o">+</span><span class="s">"&amp;
         start_date="</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">start_date</span><span class="p">)</span><span class="o">&amp;</span>
         <span class="n">end_date</span><span class="o">=</span><span class="s">"+str(end_date)
         , headers=headers).json()
 </span></code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">var</span> <span class="nx">settings</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="dl">"</span><span class="s2">url</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">https://sensefolio-api.ue.r.appspot.com/peerGroupScore?
+  <span class="dl">"</span><span class="s2">url</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">https://circular-hawk-253618.appspot.com/peerGroupScore?
         unique_peer_group_ID=</span><span class="dl">"</span><span class="o">+</span><span class="nx">str</span><span class="p">(</span><span class="nx">unique_peer_group_ID</span><span class="p">)</span><span class="o">+</span><span class="dl">"</span><span class="s2">&amp;
         start_date=</span><span class="dl">"</span><span class="o">+</span><span class="nx">str</span><span class="p">(</span><span class="nx">start_date</span><span class="p">)</span><span class="o">&amp;</span>
         <span class="nx">end_date</span><span class="o">=</span><span class="dl">"</span><span class="s2">+str(end_date),
@@ -988,7 +976,7 @@ $.ajax(settings).done(function (response) {
 </span></code></pre></div>
 <p>This endpoint retrieves all ESG Scores for a Specific Peer Group (ie. Region/Industry).</p>
 <h3 id='http-request-5'>HTTP Request</h3>
-<p><code>GET https://sensefolio-api.ue.r.appspot.com/peerGroupScore</code></p>
+<p><code>GET https://circular-hawk-253618.appspot.com/peerGroupScore</code></p>
 <h3 id='query-parameters-3'>Query Parameters</h3>
 <table><thead>
 <tr>
@@ -1019,18 +1007,16 @@ $.ajax(settings).done(function (response) {
 </tbody></table>
 <h1 id='news'>News</h1><h2 id='get-all-news-for-a-specific-company'>Get All News for a Specific Company</h2><div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">requests</span>
 
-<span class="n">API_KEY</span> <span class="o">=</span> <span class="s">'Your_API_Key'</span>
+<span class="n">apiKey</span> <span class="o">=</span> <span class="s">'Your_API_Key'</span>
 <span class="n">company_idx</span> <span class="o">=</span> <span class="mi">1</span>
 <span class="n">start_date</span> <span class="o">=</span> <span class="s">"2015-01-01"</span>
 <span class="n">end_date</span> <span class="o">=</span> <span class="s">"2020-12-01"</span>
 
-<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span>
-       <span class="s">'x-api-key'</span><span class="p">:</span> <span class="n">API_KEY</span><span class="p">,</span>
-           <span class="s">'content-type'</span><span class="p">:</span> <span class="s">'application/json'</span>
-    <span class="p">}</span>
+<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s">'x-api-key'</span><span class="p">:</span> <span class="n">apiKey</span><span class="p">,</span>
+           <span class="s">'content-type'</span><span class="p">:</span> <span class="s">'application/json'</span><span class="p">}</span>
 
 <span class="n">ActualNews</span> <span class="o">=</span> <span class="n">requests</span><span class="p">.</span><span class="n">get</span><span class="p">(</span>
-        <span class="s">"https://sensefolio-api.ue.r.appspot.com/ActualNews3?
+        <span class="s">"https://circular-hawk-253618.appspot.com/ActualNews3?
         company_idx="</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">company_idx</span><span class="p">)</span><span class="o">+</span><span class="s">"&amp;
         start_date="</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">start_date</span><span class="p">)</span><span class="s">"+&amp;
         end_date="</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">end_date</span><span class="p">)</span><span class="s">"+&amp;
@@ -1041,7 +1027,7 @@ $.ajax(settings).done(function (response) {
         controv="</span>
         <span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">).</span><span class="n">json</span><span class="p">()</span>
 </code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">var</span> <span class="nx">settings</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="dl">"</span><span class="s2">url</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">https://sensefolio-api.ue.r.appspot.com/ActualNews3?
+  <span class="dl">"</span><span class="s2">url</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">https://circular-hawk-253618.appspot.com/ActualNews3?
         company_idx=</span><span class="dl">"</span><span class="o">+</span><span class="nx">str</span><span class="p">(</span><span class="nx">company_idx</span><span class="p">)</span><span class="o">+</span><span class="dl">"</span><span class="s2">&amp;
         start_date=</span><span class="dl">"</span><span class="o">+</span><span class="nx">str</span><span class="p">(</span><span class="nx">start_date</span><span class="p">)</span><span class="dl">"</span><span class="s2">+&amp;
         end_date=</span><span class="dl">"</span><span class="o">+</span><span class="nx">str</span><span class="p">(</span><span class="nx">end_date</span><span class="p">)</span><span class="dl">"</span><span class="s2">+&amp;
@@ -1197,7 +1183,7 @@ $.ajax(settings).done(function (response) {
 </span></code></pre></div>
 <p>This endpoint retrieves all news for a specified Company.</p>
 <h3 id='http-request-6'>HTTP Request</h3>
-<p><code>GET https://sensefolio-api.ue.r.appspot.com/ActualNews3</code></p>
+<p><code>GET https://circular-hawk-253618.appspot.com/ActualNews3</code></p>
 <h3 id='query-parameters-4'>Query Parameters</h3>
 <table><thead>
 <tr>
@@ -1330,19 +1316,17 @@ Remember — You can only access the Sensefolio API with your given API allowanc
 &#39;noWorkingCondition&#39;<br></p>
 <h2 id='get-all-news-for-a-specific-company-for-a-specific-topic'>Get All News for a Specific Company for a Specific Topic</h2><div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">requests</span>
 
-<span class="n">API_KEY</span> <span class="o">=</span> <span class="s">'Your_API_Key'</span>
+<span class="n">apiKey</span> <span class="o">=</span> <span class="s">'Your_API_Key'</span>
 <span class="n">company_idx</span> <span class="o">=</span> <span class="mi">1</span>
 <span class="n">start_date</span> <span class="o">=</span> <span class="s">"2015-01-01"</span>
 <span class="n">end_date</span> <span class="o">=</span> <span class="s">"2020-12-01"</span>
 <span class="n">topic</span> <span class="o">=</span> <span class="s">"business_ethics_transparency"</span>
 
-<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span>
-       <span class="s">'x-api-key'</span><span class="p">:</span> <span class="n">API_KEY</span><span class="p">,</span>
-           <span class="s">'content-type'</span><span class="p">:</span> <span class="s">'application/json'</span>
-    <span class="p">}</span>
+<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s">'x-api-key'</span><span class="p">:</span> <span class="n">apiKey</span><span class="p">,</span>
+           <span class="s">'content-type'</span><span class="p">:</span> <span class="s">'application/json'</span><span class="p">}</span>
 
 <span class="n">ActualNews</span> <span class="o">=</span> <span class="n">requests</span><span class="p">.</span><span class="n">get</span><span class="p">(</span>
-        <span class="s">"https://sensefolio-api.ue.r.appspot.com/ActualNews3?
+        <span class="s">"https://circular-hawk-253618.appspot.com/ActualNews3?
         company_idx="</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">company_idx</span><span class="p">)</span><span class="o">+</span><span class="s">"&amp;
         start_date="</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">start_date</span><span class="p">)</span><span class="o">+</span><span class="s">"&amp;
         end_date="</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">end_date</span><span class="p">)</span><span class="o">+</span><span class="s">"&amp;
@@ -1353,7 +1337,7 @@ Remember — You can only access the Sensefolio API with your given API allowanc
         controv="</span>
         <span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">).</span><span class="n">json</span><span class="p">()</span>
 </code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">var</span> <span class="nx">settings</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="dl">"</span><span class="s2">url</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">https://sensefolio-api.ue.r.appspot.com/ActualNews3?
+  <span class="dl">"</span><span class="s2">url</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">https://circular-hawk-253618.appspot.com/ActualNews3?
         company_idx=</span><span class="dl">"</span><span class="o">+</span><span class="nx">str</span><span class="p">(</span><span class="nx">company_idx</span><span class="p">)</span><span class="o">+</span><span class="dl">"</span><span class="s2">&amp;
         start_date=</span><span class="dl">"</span><span class="o">+</span><span class="nx">str</span><span class="p">(</span><span class="nx">start_date</span><span class="p">)</span><span class="dl">"</span><span class="s2">+&amp;
         end_date=</span><span class="dl">"</span><span class="o">+</span><span class="nx">str</span><span class="p">(</span><span class="nx">end_date</span><span class="p">)</span><span class="dl">"</span><span class="s2">+&amp;
@@ -1509,7 +1493,7 @@ Remember — You can only access the Sensefolio API with your given API allowanc
 </span></code></pre></div>
 <p>This endpoint retrieves news for a specific company and for a specific Sensefolio topic.</p>
 <h3 id='http-request-7'>HTTP Request</h3>
-<p><code>GET https://sensefolio-api.ue.r.appspot.com/ActualNews3</code></p>
+<p><code>GET https://circular-hawk-253618.appspot.com/ActualNews3</code></p>
 <h3 id='url-parameters-2'>URL Parameters</h3>
 <table><thead>
 <tr>
@@ -1646,18 +1630,16 @@ Remember — You can only access the Sensefolio API with your given API allowanc
 &#39;regulatory_capture&#39;<br></p>
 <h1 id='tweets'>Tweets</h1><h2 id='get-all-tweets-for-a-specific-company'>Get All Tweets for a Specific Company</h2><div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">requests</span>
 
-<span class="n">API_KEY</span> <span class="o">=</span> <span class="s">'Your_API_Key'</span>
+<span class="n">apiKey</span> <span class="o">=</span> <span class="s">'Your_API_Key'</span>
 <span class="n">company_idx</span> <span class="o">=</span> <span class="mi">1</span>
 <span class="n">start_date</span> <span class="o">=</span> <span class="s">"2015-01-01"</span>
 <span class="n">end_date</span> <span class="o">=</span> <span class="s">"2020-12-01"</span>
 
-<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span>
-       <span class="s">'x-api-key'</span><span class="p">:</span> <span class="n">API_KEY</span><span class="p">,</span>
-           <span class="s">'content-type'</span><span class="p">:</span> <span class="s">'application/json'</span>
-    <span class="p">}</span>
+<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s">'x-api-key'</span><span class="p">:</span> <span class="n">apiKey</span><span class="p">,</span>
+           <span class="s">'content-type'</span><span class="p">:</span> <span class="s">'application/json'</span><span class="p">}</span>
 
 <span class="n">ActualTweets</span> <span class="o">=</span> <span class="n">requests</span><span class="p">.</span><span class="n">get</span><span class="p">(</span>
-        <span class="s">"https://sensefolio-api.ue.r.appspot.com/ActualTweets?
+        <span class="s">"https://circular-hawk-253618.appspot.com/ActualTweets?
         company_idx="</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">company_idx</span><span class="p">)</span><span class="o">+</span><span class="s">"&amp;
         start_date="</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">start_date</span><span class="p">)</span><span class="o">+</span><span class="s">"&amp;
         end_date="</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">end_date</span><span class="p">)</span><span class="o">+</span><span class="s">"&amp;
@@ -1668,7 +1650,7 @@ Remember — You can only access the Sensefolio API with your given API allowanc
         controv"</span>
         <span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">).</span><span class="n">json</span><span class="p">()</span>
 </code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">var</span> <span class="nx">settings</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="dl">"</span><span class="s2">url</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">https://sensefolio-api.ue.r.appspot.com/ActualNews3?
+  <span class="dl">"</span><span class="s2">url</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">https://circular-hawk-253618.appspot.com/ActualNews3?
         company_idx=</span><span class="dl">"</span><span class="o">+</span><span class="nx">str</span><span class="p">(</span><span class="nx">company_idx</span><span class="p">)</span><span class="o">+</span><span class="dl">"</span><span class="s2">&amp;
         start_date=</span><span class="dl">"</span><span class="o">+</span><span class="nx">str</span><span class="p">(</span><span class="nx">start_date</span><span class="p">)</span><span class="dl">"</span><span class="s2">+&amp;
         end_date=</span><span class="dl">"</span><span class="o">+</span><span class="nx">str</span><span class="p">(</span><span class="nx">end_date</span><span class="p">)</span><span class="dl">"</span><span class="s2">+&amp;
@@ -1774,7 +1756,7 @@ Remember — You can only access the Sensefolio API with your given API allowanc
 </span></code></pre></div>
 <p>This endpoint retrieves all tweets.</p>
 <h3 id='http-request-8'>HTTP Request</h3>
-<p><code>GET https://sensefolio-api.ue.r.appspot.com/ActualTweets</code></p>
+<p><code>GET https://circular-hawk-253618.appspot.com/ActualTweets</code></p>
 <h3 id='query-parameters-5'>Query Parameters</h3>
 <table><thead>
 <tr>
@@ -1839,19 +1821,17 @@ Remember — You can only access the Sensefolio API with your given API allowanc
 </aside>
 <h2 id='get-all-tweets-for-a-specific-company-for-a-specific-topic'>Get All Tweets for a Specific Company for a Specific Topic</h2><div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">requests</span>
 
-<span class="n">API_KEY</span> <span class="o">=</span> <span class="s">'Your_API_Key'</span>
+<span class="n">apiKey</span> <span class="o">=</span> <span class="s">'Your_API_Key'</span>
 <span class="n">company_idx</span> <span class="o">=</span> <span class="mi">1</span>
 <span class="n">start_date</span> <span class="o">=</span> <span class="s">"2015-01-01"</span>
 <span class="n">end_date</span> <span class="o">=</span> <span class="s">"2020-12-01"</span>
 <span class="n">topic</span> <span class="o">=</span> <span class="s">"business_ethics_transparency"</span>
 
-<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span>
-       <span class="s">'x-api-key'</span><span class="p">:</span> <span class="n">API_KEY</span><span class="p">,</span>
-           <span class="s">'content-type'</span><span class="p">:</span> <span class="s">'application/json'</span>
-    <span class="p">}</span>
+<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s">'x-api-key'</span><span class="p">:</span> <span class="n">apiKey</span><span class="p">,</span>
+           <span class="s">'content-type'</span><span class="p">:</span> <span class="s">'application/json'</span><span class="p">}</span>
 
 <span class="n">ActualTweets</span> <span class="o">=</span> <span class="n">requests</span><span class="p">.</span><span class="n">get</span><span class="p">(</span>
-        <span class="s">"https://sensefolio-api.ue.r.appspot.com/ActualTweets?
+        <span class="s">"https://circular-hawk-253618.appspot.com/ActualTweets?
         company_idx="</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">company_idx</span><span class="p">)</span><span class="o">+</span><span class="s">"&amp;
         start_date="</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">start_date</span><span class="p">)</span><span class="o">+</span><span class="s">"&amp;
         end_date="</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">end_date</span><span class="p">)</span><span class="o">+</span><span class="s">"&amp;
@@ -1861,7 +1841,7 @@ Remember — You can only access the Sensefolio API with your given API allowanc
         word="</span>
         <span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">).</span><span class="n">json</span><span class="p">()</span>
 </code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">var</span> <span class="nx">settings</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="dl">"</span><span class="s2">url</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">https://sensefolio-api.ue.r.appspot.com/ActualTweets?
+  <span class="dl">"</span><span class="s2">url</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">https://circular-hawk-253618.appspot.com/ActualTweets?
         company_idx=</span><span class="dl">"</span><span class="o">+</span><span class="nx">str</span><span class="p">(</span><span class="nx">company_idx</span><span class="p">)</span><span class="o">+</span><span class="dl">"</span><span class="s2">&amp;
         start_date=</span><span class="dl">"</span><span class="o">+</span><span class="nx">str</span><span class="p">(</span><span class="nx">start_date</span><span class="p">)</span><span class="dl">"</span><span class="s2">+&amp;
         end_date=</span><span class="dl">"</span><span class="o">+</span><span class="nx">str</span><span class="p">(</span><span class="nx">end_date</span><span class="p">)</span><span class="dl">"</span><span class="s2">+&amp;
@@ -1968,7 +1948,7 @@ Remember — You can only access the Sensefolio API with your given API allowanc
 </span></code></pre></div>
 <p>This endpoint retrieves tweets for a specific company and for a specific Sensefolio topic.</p>
 <h3 id='http-request-9'>HTTP Request</h3>
-<p><code>GET https://sensefolio-api.ue.r.appspot.com/ActualTweets</code></p>
+<p><code>GET https://circular-hawk-253618.appspot.com/ActualTweets</code></p>
 <h3 id='url-parameters-3'>URL Parameters</h3>
 <table><thead>
 <tr>
@@ -2029,18 +2009,16 @@ Remember — You can only access the Sensefolio API with your given API allowanc
 </tbody></table>
 <h1 id='g-company-reviews'>G Company Reviews</h1><h2 id='get-all-g-company-reviews-for-a-specific-company'>Get All G Company Reviews for a Specific Company</h2><div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">requests</span>
 
-<span class="n">API_KEY</span> <span class="o">=</span> <span class="s">'Your_API_Key'</span>
+<span class="n">apiKey</span> <span class="o">=</span> <span class="s">'Your_API_Key'</span>
 <span class="n">company_idx</span> <span class="o">=</span> <span class="mi">1</span>
 <span class="n">start_date</span> <span class="o">=</span> <span class="s">"2015-01-01"</span>
 <span class="n">end_date</span> <span class="o">=</span> <span class="s">"2020-12-01"</span>
 
-<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span>
-       <span class="s">'x-api-key'</span><span class="p">:</span> <span class="n">API_KEY</span><span class="p">,</span>
-           <span class="s">'content-type'</span><span class="p">:</span> <span class="s">'application/json'</span>
-    <span class="p">}</span>
+<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s">'x-api-key'</span><span class="p">:</span> <span class="n">apiKey</span><span class="p">,</span>
+           <span class="s">'content-type'</span><span class="p">:</span> <span class="s">'application/json'</span><span class="p">}</span>
 
 <span class="n">ActualGlassdoor</span> <span class="o">=</span> <span class="n">requests</span><span class="p">.</span><span class="n">get</span><span class="p">(</span>
-        <span class="s">"https://sensefolio-api.ue.r.appspot.com/ActualGlassdoor?
+        <span class="s">"https://circular-hawk-253618.appspot.com/ActualGlassdoor?
         company_idx="</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">company_idx</span><span class="p">)</span><span class="o">+</span><span class="s">"&amp;
         start_date="</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">start_date</span><span class="p">)</span><span class="o">+</span><span class="s">"&amp;
         end_date="</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">end_date</span><span class="p">)</span><span class="o">+</span><span class="s">"&amp;
@@ -2050,7 +2028,7 @@ Remember — You can only access the Sensefolio API with your given API allowanc
         word="</span>
         <span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">).</span><span class="n">json</span><span class="p">()</span>
 </code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">var</span> <span class="nx">settings</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="dl">"</span><span class="s2">url</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">https://sensefolio-api.ue.r.appspot.com/ActualGlassdoor?
+  <span class="dl">"</span><span class="s2">url</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">https://circular-hawk-253618.appspot.com/ActualGlassdoor?
         company_idx=</span><span class="dl">"</span><span class="o">+</span><span class="nx">str</span><span class="p">(</span><span class="nx">company_idx</span><span class="p">)</span><span class="o">+</span><span class="dl">"</span><span class="s2">&amp;
         start_date=</span><span class="dl">"</span><span class="o">+</span><span class="nx">str</span><span class="p">(</span><span class="nx">start_date</span><span class="p">)</span><span class="o">+</span><span class="dl">"</span><span class="s2">&amp;
         end_date=</span><span class="dl">"</span><span class="o">+</span><span class="nx">str</span><span class="p">(</span><span class="nx">end_date</span><span class="p">)</span><span class="o">+</span><span class="dl">"</span><span class="s2">&amp;
@@ -2103,7 +2081,7 @@ Remember — You can only access the Sensefolio API with your given API allowanc
 </span></code></pre></div>
 <p>This endpoint retrieves all G Company Reviews.</p>
 <h3 id='http-request-10'>HTTP Request</h3>
-<p><code>GET https://sensefolio-api.ue.r.appspot.com/ActualGlassdoor</code></p>
+<p><code>GET https://circular-hawk-253618.appspot.com/ActualGlassdoor</code></p>
 <h3 id='query-parameters-6'>Query Parameters</h3>
 <table><thead>
 <tr>
@@ -2162,19 +2140,17 @@ Remember — You can only access the Sensefolio API with your given API allowanc
 </aside>
 <h2 id='get-all-g-company-reviews-for-a-specific-company-for-a-specific-topic'>Get All G Company Reviews for a Specific Company for a Specific Topic</h2><div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">requests</span>
 
-<span class="n">API_KEY</span> <span class="o">=</span> <span class="s">'Your_API_Key'</span>
+<span class="n">apiKey</span> <span class="o">=</span> <span class="s">'Your_API_Key'</span>
 <span class="n">company_idx</span> <span class="o">=</span> <span class="mi">1</span>
 <span class="n">start_date</span> <span class="o">=</span> <span class="s">"2015-01-01"</span>
 <span class="n">end_date</span> <span class="o">=</span> <span class="s">"2020-12-01"</span>
 <span class="n">topic</span> <span class="o">=</span> <span class="s">"business_ethics_transparency"</span>
 
-<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span>
-       <span class="s">'x-api-key'</span><span class="p">:</span> <span class="n">API_KEY</span><span class="p">,</span>
-           <span class="s">'content-type'</span><span class="p">:</span> <span class="s">'application/json'</span>
-    <span class="p">}</span>
+<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s">'x-api-key'</span><span class="p">:</span> <span class="n">apiKey</span><span class="p">,</span>
+           <span class="s">'content-type'</span><span class="p">:</span> <span class="s">'application/json'</span><span class="p">}</span>
 
 <span class="n">ActualGlassdoor</span> <span class="o">=</span> <span class="n">requests</span><span class="p">.</span><span class="n">get</span><span class="p">(</span>
-        <span class="s">"https://sensefolio-api.ue.r.appspot.com/ActualGlassdoor?
+        <span class="s">"https://circular-hawk-253618.appspot.com/ActualGlassdoor?
         company_idx="</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">company_idx</span><span class="p">)</span><span class="o">+</span><span class="s">"&amp;
         start_date="</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">start_date</span><span class="p">)</span><span class="o">+</span><span class="s">"&amp;
         end_date="</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">end_date</span><span class="p">)</span><span class="o">+</span><span class="s">"&amp;
@@ -2184,7 +2160,7 @@ Remember — You can only access the Sensefolio API with your given API allowanc
         word="</span>
         <span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">).</span><span class="n">json</span><span class="p">()</span>
 </code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">var</span> <span class="nx">settings</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="dl">"</span><span class="s2">url</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">https://sensefolio-api.ue.r.appspot.com/ActualGlassdoor?
+  <span class="dl">"</span><span class="s2">url</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">https://circular-hawk-253618.appspot.com/ActualGlassdoor?
         company_idx=</span><span class="dl">"</span><span class="o">+</span><span class="nx">str</span><span class="p">(</span><span class="nx">company_idx</span><span class="p">)</span><span class="o">+</span><span class="dl">"</span><span class="s2">&amp;
         start_date=</span><span class="dl">"</span><span class="o">+</span><span class="nx">str</span><span class="p">(</span><span class="nx">start_date</span><span class="p">)</span><span class="o">+</span><span class="dl">"</span><span class="s2">&amp;
         end_date=</span><span class="dl">"</span><span class="o">+</span><span class="nx">str</span><span class="p">(</span><span class="nx">end_date</span><span class="p">)</span><span class="o">+</span><span class="dl">"</span><span class="s2">&amp;
@@ -2237,7 +2213,7 @@ Remember — You can only access the Sensefolio API with your given API allowanc
 </span></code></pre></div>
 <p>This endpoint retrieves all G Company Reviews for a specific company and for a specific Sensefolio topic.</p>
 <h3 id='http-request-11'>HTTP Request</h3>
-<p><code>GET https://sensefolio-api.ue.r.appspot.com/ActualGlassdoor</code></p>
+<p><code>GET https://circular-hawk-253618.appspot.com/ActualGlassdoor</code></p>
 <h3 id='url-parameters-4'>URL Parameters</h3>
 <table><thead>
 <tr>
@@ -2292,18 +2268,16 @@ Remember — You can only access the Sensefolio API with your given API allowanc
 </tbody></table>
 <h1 id='i-company-reviews'>I Company Reviews</h1><h2 id='get-all-i-company-reviews-for-a-specific-company'>Get All I Company Reviews for a Specific Company</h2><div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">requests</span>
 
-<span class="n">API_KEY</span> <span class="o">=</span> <span class="s">'Your_API_Key'</span>
+<span class="n">apiKey</span> <span class="o">=</span> <span class="s">'Your_API_Key'</span>
 <span class="n">company_idx</span> <span class="o">=</span> <span class="mi">79</span>
 <span class="n">start_date</span> <span class="o">=</span> <span class="s">"2015-01-01"</span>
 <span class="n">end_date</span> <span class="o">=</span> <span class="s">"2020-12-01"</span>
 
-<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span>
-       <span class="s">'x-api-key'</span><span class="p">:</span> <span class="n">API_KEY</span><span class="p">,</span>
-           <span class="s">'content-type'</span><span class="p">:</span> <span class="s">'application/json'</span>
-    <span class="p">}</span>
+<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s">'x-api-key'</span><span class="p">:</span> <span class="n">apiKey</span><span class="p">,</span>
+           <span class="s">'content-type'</span><span class="p">:</span> <span class="s">'application/json'</span><span class="p">}</span>
 
 <span class="n">ActualIndeed</span> <span class="o">=</span> <span class="n">requests</span><span class="p">.</span><span class="n">get</span><span class="p">(</span>
-        <span class="s">"https://sensefolio-api.ue.r.appspot.com/ActualIndeed?
+        <span class="s">"https://circular-hawk-253618.appspot.com/ActualIndeed?
         company_idx="</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">company_idx</span><span class="p">)</span><span class="o">+</span><span class="s">"&amp;
         start_date="</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">start_date</span><span class="p">)</span><span class="o">+</span><span class="s">"&amp;
         end_date="</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">end_date</span><span class="p">)</span><span class="o">+</span><span class="s">"&amp;
@@ -2313,7 +2287,7 @@ Remember — You can only access the Sensefolio API with your given API allowanc
         word="</span>
         <span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">).</span><span class="n">json</span><span class="p">()</span>
 </code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">var</span> <span class="nx">settings</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="dl">"</span><span class="s2">url</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">https://sensefolio-api.ue.r.appspot.com/ActualIndeed?
+  <span class="dl">"</span><span class="s2">url</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">https://circular-hawk-253618.appspot.com/ActualIndeed?
         company_idx=</span><span class="dl">"</span><span class="o">+</span><span class="nx">str</span><span class="p">(</span><span class="nx">company_idx</span><span class="p">)</span><span class="o">+</span><span class="dl">"</span><span class="s2">&amp;
         start_date=</span><span class="dl">"</span><span class="o">+</span><span class="nx">str</span><span class="p">(</span><span class="nx">start_date</span><span class="p">)</span><span class="o">+</span><span class="dl">"</span><span class="s2">&amp;
         end_date=</span><span class="dl">"</span><span class="o">+</span><span class="nx">str</span><span class="p">(</span><span class="nx">end_date</span><span class="p">)</span><span class="o">+</span><span class="dl">"</span><span class="s2">&amp;
@@ -2356,7 +2330,7 @@ Remember — You can only access the Sensefolio API with your given API allowanc
 </span></code></pre></div>
 <p>This endpoint retrieves all I Company Reviews.</p>
 <h3 id='http-request-12'>HTTP Request</h3>
-<p><code>GET https://sensefolio-api.ue.r.appspot.com/ActualIndeed</code></p>
+<p><code>GET https://circular-hawk-253618.appspot.com/ActualIndeed</code></p>
 <h3 id='query-parameters-7'>Query Parameters</h3>
 <table><thead>
 <tr>
@@ -2409,19 +2383,17 @@ Remember — You can only access the Sensefolio API with your given API allowanc
 </aside>
 <h2 id='get-all-i-company-reviews-for-a-specific-company-for-a-specific-topic'>Get All I Company Reviews for a Specific Company for a Specific Topic</h2><div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">requests</span>
 
-<span class="n">API_KEY</span> <span class="o">=</span> <span class="s">'Your_API_Key'</span>
+<span class="n">apiKey</span> <span class="o">=</span> <span class="s">'Your_API_Key'</span>
 <span class="n">company_idx</span> <span class="o">=</span> <span class="mi">1</span>
 <span class="n">start_date</span> <span class="o">=</span> <span class="s">"2015-01-01"</span>
 <span class="n">end_date</span> <span class="o">=</span> <span class="s">"2020-12-01"</span>
 <span class="n">topic</span> <span class="o">=</span> <span class="s">"business_ethics_transparency"</span>
 
-<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span>
-       <span class="s">'x-api-key'</span><span class="p">:</span> <span class="n">API_KEY</span><span class="p">,</span>
-           <span class="s">'content-type'</span><span class="p">:</span> <span class="s">'application/json'</span>
-    <span class="p">}</span>
+<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s">'x-api-key'</span><span class="p">:</span> <span class="n">apiKey</span><span class="p">,</span>
+           <span class="s">'content-type'</span><span class="p">:</span> <span class="s">'application/json'</span><span class="p">}</span>
 
 <span class="n">ActualIndeed</span> <span class="o">=</span> <span class="n">requests</span><span class="p">.</span><span class="n">get</span><span class="p">(</span>
-        <span class="s">"https://sensefolio-api.ue.r.appspot.com/ActualIndeed?
+        <span class="s">"https://circular-hawk-253618.appspot.com/ActualIndeed?
         company_idx="</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">company_idx</span><span class="p">)</span><span class="o">+</span><span class="s">"&amp;
         start_date="</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">start_date</span><span class="p">)</span><span class="o">+</span><span class="s">"&amp;
         end_date="</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">end_date</span><span class="p">)</span><span class="o">+</span><span class="s">"&amp;
@@ -2431,7 +2403,7 @@ Remember — You can only access the Sensefolio API with your given API allowanc
         word="</span>
         <span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">).</span><span class="n">json</span><span class="p">()</span>
 </code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">var</span> <span class="nx">settings</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="dl">"</span><span class="s2">url</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">https://sensefolio-api.ue.r.appspot.com/ActualIndeed?
+  <span class="dl">"</span><span class="s2">url</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">https://circular-hawk-253618.appspot.com/ActualIndeed?
         company_idx=</span><span class="dl">"</span><span class="o">+</span><span class="nx">str</span><span class="p">(</span><span class="nx">company_idx</span><span class="p">)</span><span class="o">+</span><span class="dl">"</span><span class="s2">&amp;
         start_date=</span><span class="dl">"</span><span class="o">+</span><span class="nx">str</span><span class="p">(</span><span class="nx">start_date</span><span class="p">)</span><span class="o">+</span><span class="dl">"</span><span class="s2">&amp;
         end_date=</span><span class="dl">"</span><span class="o">+</span><span class="nx">str</span><span class="p">(</span><span class="nx">end_date</span><span class="p">)</span><span class="o">+</span><span class="dl">"</span><span class="s2">&amp;
@@ -2473,7 +2445,7 @@ Remember — You can only access the Sensefolio API with your given API allowanc
 </span></code></pre></div>
 <p>This endpoint retrieves all I Company Reviews for a specific company and for a specific Sensefolio topic.</p>
 <h3 id='http-request-13'>HTTP Request</h3>
-<p><code>GET https://sensefolio-api.ue.r.appspot.com/ActualIndeed</code></p>
+<p><code>GET https://circular-hawk-253618.appspot.com/ActualIndeed</code></p>
 <h3 id='url-parameters-5'>URL Parameters</h3>
 <table><thead>
 <tr>
@@ -2522,24 +2494,22 @@ Remember — You can only access the Sensefolio API with your given API allowanc
 </tbody></table>
 <h1 id='carbon-disclosure'>Carbon Disclosure</h1><h2 id='get-all-carbon-disclosure-information-for-a-specific-company'>Get All Carbon Disclosure Information for a Specific Company</h2><div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">requests</span>
 
-<span class="n">API_KEY</span> <span class="o">=</span> <span class="s">'Your_API_Key'</span>
+<span class="n">apiKey</span> <span class="o">=</span> <span class="s">'Your_API_Key'</span>
 <span class="n">company_idx</span> <span class="o">=</span> <span class="mi">1</span>
 <span class="n">start_date</span> <span class="o">=</span> <span class="s">"2015-01-01"</span>
 <span class="n">end_date</span> <span class="o">=</span> <span class="s">"2020-12-01"</span>
 
-<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span>
-       <span class="s">'x-api-key'</span><span class="p">:</span> <span class="n">API_KEY</span><span class="p">,</span>
-           <span class="s">'content-type'</span><span class="p">:</span> <span class="s">'application/json'</span>
-    <span class="p">}</span>
+<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s">'x-api-key'</span><span class="p">:</span> <span class="n">apiKey</span><span class="p">,</span>
+           <span class="s">'content-type'</span><span class="p">:</span> <span class="s">'application/json'</span><span class="p">}</span>
 
 <span class="n">ActualCDP</span> <span class="o">=</span> <span class="n">requests</span><span class="p">.</span><span class="n">get</span><span class="p">(</span>
-        <span class="s">"https://sensefolio-api.ue.r.appspot.com/ActualCDP?
+        <span class="s">"https://circular-hawk-253618.appspot.com/ActualCDP?
         company_idx="</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">company_idx</span><span class="p">)</span><span class="o">+</span><span class="s">"&amp;
         start_date="</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">start_date</span><span class="p">)</span><span class="o">+</span><span class="s">"&amp;
         end_date="</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">end_date</span><span class="p">)</span>
         <span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">).</span><span class="n">json</span><span class="p">()</span>
 </code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">var</span> <span class="nx">settings</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="dl">"</span><span class="s2">url</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">https://sensefolio-api.ue.r.appspot.com/ActualCDP?
+  <span class="dl">"</span><span class="s2">url</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">https://circular-hawk-253618.appspot.com/ActualCDP?
         company_idx=</span><span class="dl">"</span><span class="o">+</span><span class="nx">str</span><span class="p">(</span><span class="nx">company_idx</span><span class="p">)</span><span class="o">+</span><span class="dl">"</span><span class="s2">&amp;
         start_date=</span><span class="dl">"</span><span class="o">+</span><span class="nx">str</span><span class="p">(</span><span class="nx">start_date</span><span class="p">)</span><span class="o">+</span><span class="dl">"</span><span class="s2">&amp;
         end_date=</span><span class="dl">"</span><span class="o">+</span><span class="nx">str</span><span class="p">(</span><span class="nx">end_date</span><span class="p">),</span>
@@ -2594,7 +2564,7 @@ Remember — You can only access the Sensefolio API with your given API allowanc
 </span></code></pre></div>
 <p>This endpoint retrieves all Carbon Disclosure for a specific company and optionally in a certain timeframe.</p>
 <h3 id='http-request-14'>HTTP Request</h3>
-<p><code>GET https://sensefolio-api.ue.r.appspot.com/ActualCDP</code></p>
+<p><code>GET https://circular-hawk-253618.appspot.com/ActualCDP</code></p>
 <h3 id='query-parameters-8'>Query Parameters</h3>
 <table><thead>
 <tr>
@@ -2629,24 +2599,22 @@ Remember — You can only access the Sensefolio API with your given API allowanc
 </aside>
 <h1 id='violation-tracker'>Violation Tracker</h1><h2 id='get-all-violation-information-for-a-specific-company'>Get All Violation Information for a Specific Company</h2><div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">requests</span>
 
-<span class="n">API_KEY</span> <span class="o">=</span> <span class="s">'Your_API_Key'</span>
+<span class="n">apiKey</span> <span class="o">=</span> <span class="s">'Your_API_Key'</span>
 <span class="n">company_idx</span> <span class="o">=</span> <span class="mi">1</span>
 <span class="n">start_date</span> <span class="o">=</span> <span class="s">"2015-01-01"</span>
 <span class="n">end_date</span> <span class="o">=</span> <span class="s">"2020-12-01"</span>
 
-<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span>
-       <span class="s">'x-api-key'</span><span class="p">:</span> <span class="n">API_KEY</span><span class="p">,</span>
-           <span class="s">'content-type'</span><span class="p">:</span> <span class="s">'application/json'</span>
-    <span class="p">}</span>
+<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s">'x-api-key'</span><span class="p">:</span> <span class="n">apiKey</span><span class="p">,</span>
+           <span class="s">'content-type'</span><span class="p">:</span> <span class="s">'application/json'</span><span class="p">}</span>
 
 <span class="n">ActualViolationTracker</span> <span class="o">=</span> <span class="n">requests</span><span class="p">.</span><span class="n">get</span><span class="p">(</span>
-        <span class="s">"https://sensefolio-api.ue.r.appspot.com/ActualViolationTracker?
+        <span class="s">"https://circular-hawk-253618.appspot.com/ActualViolationTracker?
         company_idx="</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">company_idx</span><span class="p">)</span><span class="o">+</span><span class="s">"&amp;
         start_date="</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">start_date</span><span class="p">)</span><span class="o">+</span><span class="s">"&amp;
         end_date="</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">end_date</span><span class="p">)</span>
         <span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">).</span><span class="n">json</span><span class="p">()</span>
 </code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">var</span> <span class="nx">settings</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="dl">"</span><span class="s2">url</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">https://sensefolio-api.ue.r.appspot.com/ActualViolationTracker?
+  <span class="dl">"</span><span class="s2">url</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">https://circular-hawk-253618.appspot.com/ActualViolationTracker?
         company_idx=</span><span class="dl">"</span><span class="o">+</span><span class="nx">str</span><span class="p">(</span><span class="nx">company_idx</span><span class="p">)</span><span class="o">+</span><span class="dl">"</span><span class="s2">&amp;
         start_date=</span><span class="dl">"</span><span class="o">+</span><span class="nx">str</span><span class="p">(</span><span class="nx">start_date</span><span class="p">)</span><span class="o">+</span><span class="dl">"</span><span class="s2">&amp;
         end_date=</span><span class="dl">"</span><span class="o">+</span><span class="nx">str</span><span class="p">(</span><span class="nx">end_date</span><span class="p">),</span>
@@ -2695,7 +2663,7 @@ Remember — You can only access the Sensefolio API with your given API allowanc
 </span></code></pre></div>
 <p>This endpoint retrieves all Violations for a specific company and optionally in a certain timeframe.</p>
 <h3 id='http-request-15'>HTTP Request</h3>
-<p><code>GET https://sensefolio-api.ue.r.appspot.com/ActualViolationTracker</code></p>
+<p><code>GET https://circular-hawk-253618.appspot.com/ActualViolationTracker</code></p>
 <h3 id='query-parameters-9'>Query Parameters</h3>
 <table><thead>
 <tr>
