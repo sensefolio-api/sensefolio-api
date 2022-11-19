@@ -1,10 +1,10 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/slatedocs/img/main/logo-slate.png" alt="Slate: API Documentation Generator" width="226">
+  <img src="http://sensefolio.com/wp-content/uploads/2022/10/Sensefolio_Dark_Logo.png" alt="Sensefolio API Documentation" width="226">
   <br>
   <a href="https://github.com/slatedocs/slate/actions?query=workflow%3ABuild+branch%3Amain"><img src="https://github.com/slatedocs/slate/workflows/Build/badge.svg?branch=main" alt="Build Status"></a>
 </p>
 
-<p align="center">Slate helps you create beautiful, intelligent, responsive API documentation.</p>
+<p align="center">Sensefolio API documentation.</p>
 
 <p align="center"><img src="https://raw.githubusercontent.com/slatedocs/img/main/screenshot-slate.png" width=700 alt="Screenshot of Example Documentation created with Slate"></p>
 
